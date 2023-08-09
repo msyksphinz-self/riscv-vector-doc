@@ -2025,3 +2025,539 @@ Encoding::
 
 Description::
 Indexed-unordered segment stores
+
+== Vector Load/Store Whole Register Instructions
+
+=== vl1re8.v
+
+Mnemonic::
+--
+	vl1re8.v    vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd` with VLEN/8 bytes held at address in `rs1`
+
+=== vl1re16.v
+
+Mnemonic::
+--
+	vl1re16.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x5, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd` with VLEN/16 halfwords held at address in `rs1`
+
+=== vl1re32.v
+
+Mnemonic::
+--
+	vl1re32.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x6, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd` with VLEN/32 words held at address in `rs1`
+
+=== vl1re64.v
+
+Mnemonic::
+--
+	vl1re64.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x7, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd` with VLEN/64 doublewords held at address in `rs1`
+
+=== vl2re8.v
+
+Mnemonic::
+--
+	vl2re8.v    vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x1, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd`-`vd+1` with VLEN/8 bytes held at address in `rs1`
+
+=== vl2re16.v
+
+Mnemonic::
+--
+	vl2re16.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x5, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x1, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd`-`vd+1` with VLEN/16 halfwords held at address in `rs1`
+
+=== vl2re32.v
+
+Mnemonic::
+--
+	vl2re32.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x6, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x1, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd`-`vd+1` with VLEN/32 words held at address in `rs1`
+
+=== vl2re64.v
+
+Mnemonic::
+--
+	vl2re64.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x7, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x1, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd`-`vd+1` with VLEN/64 doublewords held at address in `rs1`
+
+
+=== vl4re8.v
+
+Mnemonic::
+--
+	vl4re8.v    vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x3, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd`-`vd+3` with VLEN/8 bytes held at address in `rs1`
+
+=== vl4re16.v
+
+Mnemonic::
+--
+	vl4re16.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x5, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x3, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd`-`vd+3` with VLEN/16 halfwords held at address in `rs1`
+
+=== vl4re32.v
+
+Mnemonic::
+--
+	vl4re32.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x6, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x3, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd`-`vd+3` with VLEN/32 words held at address in `rs1`
+
+=== vl4re64.v
+
+Mnemonic::
+--
+	vl4re64.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x7, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x3, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd`-`vd+3` with VLEN/64 doublewords held at address in `rs1`
+
+
+=== vl8re8.v
+
+Mnemonic::
+--
+	vl8re8.v    vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x7, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd`-`vd+7` with VLEN/8 bytes held at address in `rs1`
+
+=== vl8re16.v
+
+Mnemonic::
+--
+	vl8re16.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x5, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x7, attr: 'nf'},
+]}
+....
+
+Description::
+Load `vd`-`vd+7` with VLEN/16 halfwords held at address in `rs1`
+
+=== vl8re32.v
+
+Mnemonic::
+--
+	vl8re32.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x6, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x7, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd`-`vd+7` with VLEN/32 words held at address in `rs1`
+
+=== vl8re64.v
+
+Mnemonic::
+--
+	vl8re64.v   vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x07, attr: 'VL*R*'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x7, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'lumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x10000, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x7, attr: 'nf'},
+]}
+....
+
+
+Description::
+Load `vd`-`vd+7` with VLEN/64 doublewords held at address in `rs1`
+
+
+=== vs1r.v
+
+Mnemonic::
+--
+    vs1r.v vs3, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS*R*'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x1000},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'sumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x100, attr: 'mop'},
+  {bits: 1, name: 0x100, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+Store `vs3` to address in `rs1`
+
+
+=== vs2r.v
+
+Mnemonic::
+--
+    vs2r.v vs3, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS*R*'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x1000},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'sumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x100, attr: 'mop'},
+  {bits: 1, name: 0x100, attr: 'mew'},
+  {bits: 3, name: 0x1, attr: 'nf'},
+]}
+....
+
+Description::
+Store `vs3`-`vs3+1` to address in `rs1`
+
+
+=== vs4r.v
+
+Mnemonic::
+--
+    vs4r.v vs3, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS*R*'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x1000},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'sumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x100, attr: 'mop'},
+  {bits: 1, name: 0x100, attr: 'mew'},
+  {bits: 3, name: 0x3, attr: 'nf'},
+]}
+....
+
+Description::
+Store `vs3`-`vs3+3` to address in `rs1`
+
+
+=== vs8r.v
+
+Mnemonic::
+--
+    vs8r.v vs3, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS*R*'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x1000},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 8, attr: 'sumop'},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 2, name: 0x100, attr: 'mop'},
+  {bits: 1, name: 0x100, attr: 'mew'},
+  {bits: 3, name: 0x7, attr: 'nf'},
+]}
+....
+
+Description::
+Store `vs3`-`vs3+7` to address in `rs1`
