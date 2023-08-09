@@ -1,0 +1,400 @@
+== Vector Unit-Stride Instructions
+
+https://github.com/riscv-non-isa/rvv-intrinsic-doc/blob/main/auto-generated/intrinsic_funcs/01_vector_loads_and_stores_functions.md#vector-unit-stride-load-functions
+
+
+=== vle8.v
+
+Mnemonic::
+--
+    vle8.v    vd, (rs1), vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x7, attr: 'VL* unit-stride'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'lumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+8-bit unit-stride load
+
+
+=== vle16.v
+
+Mnemonic::
+--
+    vle16.v   vd, (rs1), vm
+--
+
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x7, attr: 'VL* unit-stride'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x5, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'lumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+16-bit unit-stride load
+
+=== vle32.v
+
+Mnemonic::
+--
+    vle32.v   vd, (rs1), vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x7, attr: 'VL* unit-stride'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x6, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'lumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+
+Description::
+32-bit unit-stride load
+
+=== vle64.v
+
+Mnemonic::
+--
+    vle64.v   vd, (rs1), vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x7, attr: 'VL* unit-stride'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x7, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'lumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+
+Description::
+64-bit unit-stride load
+
+=== vse8.v
+
+https://github.com/riscv-non-isa/rvv-intrinsic-doc/blob/main/auto-generated/intrinsic_funcs/01_vector_loads_and_stores_functions.md#vector-unit-stride-store-functions
+
+Mnemonic::
+--
+    vse8.v    vs3, (rs1), vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS* unit-stride'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'sumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+8-bit unit-stride store
+
+=== vse16.v
+
+Mnemonic::
+--
+    vse16.v   vs3, (rs1), vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS* unit-stride'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x5, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'sumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+16-bit unit-stride store
+
+=== vse32.v
+
+Mnemonic::
+--
+    vse32.v   vs3, (rs1), vm
+--
+
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS* unit-stride'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x6, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'sumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+32-bit unit-stride store
+
+=== vse64.v
+
+Mnemonic::
+--
+    vse64.v   vs3, (rs1), vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS* unit-stride'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x7, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0x0, attr: 'sumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+
+Description::
+64-bit unit-stride store
+
+=== vlm.v
+
+Mnemonic::
+--
+    vlm.v vd, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x7, attr: 'VL* unit-stride'},
+  {bits: 5, name: 'vd', attr: 'destination of load', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0xb, attr: 'lumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+Vector unit-stride mask load
+Load byte vector of length ceil(vl/8)
+
+=== vsm.v
+
+Mnemonic::
+--
+    vsm.v vs3, (rs1)
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x27, attr: 'VS* unit-stride'},
+  {bits: 5, name: 'vs3', attr: 'store data', type: 2},
+  {bits: 3, name: 0x0, attr: 'width'},
+  {bits: 5, name: 'rs1', attr: 'base address', type: 4},
+  {bits: 5, name: 0xb, attr: 'sumop'},
+  {bits: 1, name: 'vm'},
+  {bits: 2, name: 0x0, attr: 'mop'},
+  {bits: 1, name: 0x0, attr: 'mew'},
+  {bits: 3, name: 0x0, attr: 'nf'},
+]}
+....
+
+Description::
+Vector unit-stride mask store
+Store byte vector of length ceil(vl/8)
+
+
+
+=== Vector Strided Instructions
+
+----
+    # Vector strided loads and stores
+
+    # vd destination, rs1 base address, rs2 byte stride
+    vlse8.v    vd, (rs1), rs2, vm  #    8-bit strided load
+    vlse16.v   vd, (rs1), rs2, vm  #   16-bit strided load
+    vlse32.v   vd, (rs1), rs2, vm  #   32-bit strided load
+    vlse64.v   vd, (rs1), rs2, vm  #   64-bit strided load
+
+    # vs3 store data, rs1 base address, rs2 byte stride
+    vsse8.v    vs3, (rs1), rs2, vm  #    8-bit strided store
+    vsse16.v   vs3, (rs1), rs2, vm  #   16-bit strided store
+    vsse32.v   vs3, (rs1), rs2, vm  #   32-bit strided store
+    vsse64.v   vs3, (rs1), rs2, vm  #   64-bit strided store
+----
+
+Negative and zero strides are supported.
+
+Element accesses within a strided instruction are unordered with
+respect to each other.
+
+When `rs2`=`x0`, then an implementation is allowed, but not required,
+to perform fewer memory operations than the number of active elements,
+and may perform different numbers of memory operations across
+different dynamic executions of the same static instruction.
+
+NOTE: Compilers must be aware to not use the `x0` form for rs2 when
+the immediate stride is `0` if the intent is to require all memory
+accesses are performed.
+
+When `rs2!=x0` and the value of `x[rs2]=0`, the implementation must
+perform one memory access for each active element (but these accesses
+will not be ordered).
+
+NOTE: As with other architectural mandates, implementations must
+_appear_ to perform each memory access. Microarchitectures are
+free to optimize away accesses that would not be observed by another
+agent, for example, in idempotent memory regions obeying RVWMO.  For
+non-idempotent memory regions, where by definition each access can be
+observed by a device, the optimization would not be possible.
+
+NOTE: When repeating ordered vector accesses to the same memory
+address are required, then an ordered indexed operation can be used.
+
+=== Vector Indexed Instructions
+
+----
+    # Vector indexed loads and stores
+
+    # Vector indexed-unordered load instructions
+    # vd destination, rs1 base address, vs2 byte offsets
+    vluxei8.v    vd, (rs1), vs2, vm  # unordered  8-bit indexed load of SEW data
+    vluxei16.v   vd, (rs1), vs2, vm  # unordered 16-bit indexed load of SEW data
+    vluxei32.v   vd, (rs1), vs2, vm  # unordered 32-bit indexed load of SEW data
+    vluxei64.v   vd, (rs1), vs2, vm  # unordered 64-bit indexed load of SEW data
+
+    # Vector indexed-ordered load instructions
+    # vd destination, rs1 base address, vs2 byte offsets
+    vloxei8.v    vd, (rs1), vs2, vm  # ordered  8-bit indexed load of SEW data
+    vloxei16.v   vd, (rs1), vs2, vm  # ordered 16-bit indexed load of SEW data
+    vloxei32.v   vd, (rs1), vs2, vm  # ordered 32-bit indexed load of SEW data
+    vloxei64.v   vd, (rs1), vs2, vm  # ordered 64-bit indexed load of SEW data
+
+    # Vector indexed-unordered store instructions
+    # vs3 store data, rs1 base address, vs2 byte offsets
+    vsuxei8.v   vs3, (rs1), vs2, vm # unordered  8-bit indexed store of SEW data
+    vsuxei16.v  vs3, (rs1), vs2, vm # unordered 16-bit indexed store of SEW data
+    vsuxei32.v  vs3, (rs1), vs2, vm # unordered 32-bit indexed store of SEW data
+    vsuxei64.v  vs3, (rs1), vs2, vm # unordered 64-bit indexed store of SEW data
+
+    # Vector indexed-ordered store instructions
+    # vs3 store data, rs1 base address, vs2 byte offsets
+    vsoxei8.v    vs3, (rs1), vs2, vm  # ordered  8-bit indexed store of SEW data
+    vsoxei16.v   vs3, (rs1), vs2, vm  # ordered 16-bit indexed store of SEW data
+    vsoxei32.v   vs3, (rs1), vs2, vm  # ordered 32-bit indexed store of SEW data
+    vsoxei64.v   vs3, (rs1), vs2, vm  # ordered 64-bit indexed store of SEW data
+
+----
+
+NOTE: The assembler syntax for indexed loads and stores uses
+``ei``__x__ instead of ``e``__x__ to indicate the statically encoded EEW
+is of the index not the data.
+
+NOTE: The indexed operations mnemonics have a "U" or "O" to
+distinguish between unordered and ordered, while the other vector
+addressing modes have no character. While this is perhaps a little
+less consistent, this approach minimizes disruption to existing
+software, as VSXEI previously meant "ordered" - and the opcode can be
+retained as an alias during transition to help reduce software churn.
+
+=== Unit-stride Fault-Only-First Loads
+
+The unit-stride fault-only-first load instructions are used to
+vectorize loops with data-dependent exit conditions ("while" loops).
+These instructions execute as a regular load except that they will
+only take a trap caused by a synchronous exception on element 0.  If
+element 0 raises an exception, `vl` is not modified, and the trap is
+taken.  If an element > 0 raises an exception, the corresponding trap
+is not taken, and the vector length `vl` is reduced to the index of
+the element that would have raised an exception.
+
+Load instructions may overwrite active destination vector register
+group elements past the element index at which the trap is reported.
+Similarly, fault-only-first load instructions may update active destination
+elements past the element that causes trimming of the vector length
+(but not past the original vector length).  The values of these
+spurious updates do not have to correspond to the values in memory at
+the addressed memory locations.  Non-idempotent memory locations can
+only be accessed when it is known the corresponding element load
+operation will not be restarted due to a trap or vector-length
+trimming.
+
+----
+    # Vector unit-stride fault-only-first loads
+
+    # vd destination, rs1 base address, vm is mask encoding (v0.t or <missing>)
+    vle8ff.v    vd, (rs1), vm  #    8-bit unit-stride fault-only-first load
+    vle16ff.v   vd, (rs1), vm  #   16-bit unit-stride fault-only-first load
+    vle32ff.v   vd, (rs1), vm  #   32-bit unit-stride fault-only-first load
+    vle64ff.v   vd, (rs1), vm  #   64-bit unit-stride fault-only-first load
+----

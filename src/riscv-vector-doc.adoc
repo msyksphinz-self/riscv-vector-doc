@@ -1,0 +1,28 @@
+[[riscv-vector-doc]]
+= RISC-V Vector ISA-extensions
+:description: Vector ISA-extensions
+:company: RISC-V
+// Pull in variable with revision info
+:url-riscv: http://riscv.org
+:doctype: book
+//:doctype: report
+
+:imagesdir: images
+
+// needs to be changed
+:WaveDromEditorApp: ~/wavedrom-cli/cli/wavedrom-cli.js
+:imagesoutdir: images
+:icons: font
+:lang: en
+:listing-caption: Listing
+:sectnums:
+:toc: left
+:toclevels: 4
+:source-highlighter: pygments
+ifdef::backend-pdf[]
+:source-highlighter: coderay
+endif::[]
+
+include::vec_config.adoc[]
+
+include::vec_mem.adoc[]

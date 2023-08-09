@@ -1,0 +1,9 @@
+.asciidoctor/
+*.svg
+images/
+node_modules/
+package-lock.json
+package.json
+*.docbook
+*.html
+*.pdf
