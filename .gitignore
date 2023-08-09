@@ -7,3 +7,5 @@ package.json
 *.docbook
 *.html
 *.pdf
+*.rst
+build/
