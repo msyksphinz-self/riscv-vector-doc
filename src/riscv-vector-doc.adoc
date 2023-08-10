@@ -26,3 +26,5 @@ endif::[]
 include::vec_config.adoc[]
 
 include::vec_mem.adoc[]
+
+include::vec_int.adoc[]

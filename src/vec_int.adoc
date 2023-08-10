@@ -1,0 +1,1070 @@
+== Vector Single-Width Integer Add and Subtract
+
+=== vadd.vv
+
+Mnemonic::
+--
+    vadd.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0, attr: 'funct6'},
+]}
+....
+
+Descrption::
+Integer addition, vector-vector
+
+=== vadd.vx
+Mnemonic::
+--
+    vadd.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0, attr: 'funct6'},
+]}
+....
+
+Descrption::
+Integer addition, vector-scalar
+
+=== vadd.vi
+
+Mnemonic::
+--
+    vadd.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0, attr: 'funct6'},
+]}
+....
+
+Descrption::
+Integer addition, vector-immediate
+
+=== vsub.vv
+Mnemonic::
+--
+    vsub.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 2, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Integer subtraction, vector-vector
+
+=== vsub.vx
+
+Mnemonic::
+--
+    vsub.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 2, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer subtraction, vector-scalar
+
+=== vrsub.vx
+
+Mnemonic::
+--
+    vrsub.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 3, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer reverse subtract, vd[i] = x[rs1] - vs2[i]
+
+=== vrsub.vi
+
+Mnemonic::
+--
+    vrsub.vi vd, vs2, imm, vm
+--
+
+Encoding::
+
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 3, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer reverse subtract, vd[i] = imm - vs2[i]
+
+
+== Vector Widening Integer Add/Subtract
+
+The widening add/subtract instructions are provided in both signed and
+unsigned variants, depending on whether the narrower source operands
+are first sign- or zero-extended before forming the double-width sum.
+
+=== vwaddu.vv
+
+Mnemonic::
+--
+  vwaddu.vv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x30, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+=== vwaddu.vx
+
+Mnemonic::
+--
+  vwaddu.vx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x30, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
+
+=== vwsubu.vv
+
+Mnemonic::
+--
+  vwsubu.vv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x32, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+=== vwsubu.vx
+
+Mnemonic::
+--
+  vwsubu.vx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x32, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
+
+
+=== vwadd.vv
+
+Mnemonic::
+--
+  vwadd.vv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x31, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+=== vwadd.vx
+
+Mnemonic::
+--
+  vwadd.vx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x31, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
+
+=== vwsub.vv
+
+Mnemonic::
+--
+  vwsub.vv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x33, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+=== vwsub.vx
+
+Mnemonic::
+--
+  vwsub.vx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x33, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
+
+
+=== vwaddu.wv
+
+Mnemonic::
+--
+  vwaddu.wv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x34, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+=== vwaddu.wx
+
+Mnemonic::
+--
+  vwaddu.wx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x34, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
+
+=== vwsubu.wv
+
+Mnemonic::
+--
+  vwsubu.wv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x36, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+=== vwsubu.wx
+
+Mnemonic::
+--
+  vwsubu.wx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x36, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
+
+
+=== vwadd.wv
+
+Mnemonic::
+--
+  vwadd.wv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x35, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+=== vwadd.wx
+
+Mnemonic::
+--
+  vwadd.wx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x35, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
+
+=== vwsub.wv
+
+Mnemonic::
+--
+  vwsub.wv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x37, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+=== vwsub.wx
+
+Mnemonic::
+--
+  vwsub.wx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x37, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
+
+== Vector Integer Extension
+
+=== vzext.vf2
+Mnemonic::
+--
+  vzext.vf2 vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x6, attr: 'vs1'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Zero-extend SEW/2 source to SEW destination
+
+=== vsext.vf2
+Mnemonic::
+--
+  vsext.vf2 vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x7, attr:'vs1'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Sign-extend SEW/2 source to SEW destination
+
+=== vzext.vf4
+Mnemonic::
+--
+  vzext.vf4 vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x4, attr: 'vs1'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Zero-extend SEW/4 source to SEW destination
+
+=== vsext.vf4
+Mnemonic::
+--
+  vsext.vf4 vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x5, attr: 'vs1'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Sign-extend SEW/4 source to SEW destination
+
+=== vzext.vf8
+Mnemonic::
+--
+  vzext.vf8 vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x2, attr: 'vs1'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Zero-extend SEW/8 source to SEW destination
+
+=== vsext.vf8
+Mnemonic::
+--
+  vsext.vf8 vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x3, attr: 'vs1'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Sign-extend SEW/8 source to SEW destination
+
+== Vector Integer Add-with-Carry / Subtract-with-Borrow Instructions
+
+=== vadc.vvm
+
+Mnemonic::
+--
+  vadc.vvm   vd, vs2, vs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x10, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce sum with carry. vd[i] = vs2[i] + vs1[i] + v0.mask[i]
+
+=== vadc.vxm
+
+Mnemonic::
+--
+  vadc.vxm   vd, vs2, rs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x10, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce sum with carry. vd[i] = vs2[i] + x[rs1] + v0.mask[i]
+
+=== vadc.vim
+
+Mnemonic::
+--
+  vadc.vim   vd, vs2, imm, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x10, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce sum with carry. vd[i] = vs2[i] + imm + v0.mask[i]
+
+=== vmadc.vvm
+
+Mnemonic::
+--
+  vmadc.vvm   vd, vs2, vs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x11, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + vs1[i] + v0.mask[i])
+
+=== vmadc.vxm
+
+Mnemonic::
+--
+  vmadc.vxm   vd, vs2, rs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x11, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + x[rs1] + v0.mask[i])
+
+=== vmadc.vim
+
+Mnemonic::
+--
+  vmadc.vim   vd, vs2, imm, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x11, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + imm + v0.mask[i])
+
+=== vmadc.vv
+
+Mnemonic::
+--
+  vmadc.vv    vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x11, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + vs1[i])
+
+=== vmadc.vx
+
+Mnemonic::
+--
+  vmadc.vx    vd, vs2, rs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x11, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + x[rs1])
+
+=== vmadc.vi
+
+Mnemonic::
+--
+  vmadc.vi    vd, vs2, imm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x11, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + imm)
+
+=== vsbc.vvm
+
+Mnemonic::
+--
+  vsbc.vvm   vd, vs2, vs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce difference with borrow. vd[i] = vs2[i] - vs1[i] - v0.mask[i]
+
+=== vsbc.vxm
+
+Mnemonic::
+--
+  vsbc.vxm   vd, vs2, rs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x12, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce difference with borrow. vd[i] = vs2[i] - x[rs1] - v0.mask[i]
+
+=== vmsbc.vvm
+
+Mnemonic::
+--
+  vmsbc.vvm   vd, vs2, vs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x13, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - vs1[i] - v0.mask[i])
+
+=== vmsbc.vxm
+
+Mnemonic::
+--
+  vmsbc.vxm   vd, vs2, rs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x0, attr: 'vm'},
+  {bits: 6, name: 0x13, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - x[rs1] - v0.mask[i])
+
+=== vmsbc.vv
+
+Mnemonic::
+--
+  vmsbc.vv    vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x13, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - vs1[i])
+
+=== vmsbc.vx
+
+Mnemonic::
+--
+  vmsbc.vx    vd, vs2, rs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x13, attr: 'funct6'},
+]}
+....
+
+Description::
+Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - x[rs1])
