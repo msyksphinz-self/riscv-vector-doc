@@ -16,9 +16,6 @@ Mnemonic::
     vsetvli rd, rs1, vtypei
 --
 
-Description::
-rd = new vl, rs1 = AVL, vtypei = new vtype setting
-
 Encoding::
 [wavedrom, , svg]
 ....
@@ -32,6 +29,9 @@ Encoding::
 ]}
 ....
 
+Description::
+rd = new vl, rs1 = AVL, vtypei = new vtype setting
+
 
 
 === vsetivli
@@ -40,9 +40,6 @@ Mnemonic::
 --
     vsetivli rd, uimm, vtypei
 --
-
-Description::
-rd = new vl, uimm = AVL, vtypei = new vtype setting
 
 Encoding::
 [wavedrom, , svg]
@@ -58,15 +55,16 @@ Encoding::
 ]}
 ....
 
+Description::
+rd = new vl, uimm = AVL, vtypei = new vtype setting
+
+
 === vsetvl
 
 Mnemonic::
 --
     vsetvl  rd, rs1, rs2
 --
-
-Description::
-rd = new vl, rs1 = AVL, rs2 = new vtype value
 
 Encoding::
 [wavedrom, , svg]
@@ -81,3 +79,6 @@ Encoding::
   {bits: 1,  name: 1},
 ]}
 ....
+
+Description::
+rd = new vl, rs1 = AVL, rs2 = new vtype value

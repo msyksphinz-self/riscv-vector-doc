@@ -1,0 +1,1265 @@
+= Vector Bitwise Logical Instructions
+
+== vand.vv
+
+Mnemonic::
+--
+    vand.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x09, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Bitwise logical operations, Vector-vector
+
+== vand.vx
+
+Mnemonic::
+--
+    vand.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0x4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x09, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, vector-scalar
+
+== vand.vi
+
+Mnemonic::
+--
+    vand.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x09, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, vector-immediate
+
+== vor.vv
+
+Mnemonic::
+--
+    vor.vv vd, vs2, vs1, vm
+--
+
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x0a, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, Vector-vector
+
+== vor.vx
+
+Mnemonic::
+--
+    vor.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x0a, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, vector-scalar
+
+== vor.vi
+
+Mnemonic::
+--
+    vor.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x0a, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Bitwise logical operations, vector-immediate
+
+== vxor.vv
+
+Mnemonic::
+--
+    vxor.vv vd, vs2, vs1, vm
+--
+
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x0b, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, Vector-vector
+
+== vxor.vx
+
+Mnemonic::
+--
+    vxor.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x0b, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, vector-scalar
+
+== vxor.vi
+
+Mnemonic::
+--
+    vxor.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x0b, attr: 'funct6'},
+]}
+....
+
+Description::
+Bitwise logical operations, vector-immediate
+
+
+== Vector Single-Width Shift Instructions
+
+== vsll.vv
+Mnemonic::
+--
+    vsll.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x25, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, Vector-vector
+
+== vsll.vx
+Mnemonic::
+--
+    vsll.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x25, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, vector-scalar
+
+== vsll.vi
+Mnemonic::
+--
+    vsll.vi vd, vs2, uimm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x25, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Bit shift operations, vector-immediate
+
+== vsrl.vv
+Mnemonic::
+--
+    vsrl.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x28, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, Vector-vector
+
+== vsrl.vx
+Mnemonic::
+--
+    vsrl.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x28, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, vector-scalar
+
+== vsrl.vi
+Mnemonic::
+--
+    vsrl.vi vd, vs2, uimm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x28, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, vector-immediate
+
+== vsra.vv
+Mnemonic::
+--
+    vsra.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x29, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, Vector-vector
+
+== vsra.vx
+Mnemonic::
+--
+    vsra.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x29, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Bit shift operations, vector-scalar
+
+== vsra.vi
+Mnemonic::
+--
+    vsra.vi vd, vs2, uimm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x29, attr: 'funct6'},
+]}
+....
+
+Description::
+Bit shift operations, vector-immediate
+
+
+== Vector Narrowing Integer Right Shift Instructions
+
+== vnsrl.wv
+
+Mnemonic::
+--
+    vnsrl.wv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x2c, attr: 'funct6'},
+]}
+....
+
+Description::
+Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-vector
+
+== vnsrl.wx
+
+Mnemonic::
+--
+    vnsrl.wx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x2c, attr: 'funct6'},
+]}
+....
+
+Description::
+Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-scalar
+
+== vnsrl.wi
+
+Mnemonic::
+--
+    vnsrl.wi vd, vs2, uimm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x2c, attr: 'funct6'},
+]}
+....
+
+Description::
+Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-immediate
+
+== vnsra.wv
+
+Mnemonic::
+--
+    vnsra.wv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x2d, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-vector
+
+== vnsra.wx
+
+Mnemonic::
+--
+    vnsra.wx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x2d, attr: 'funct6'},
+]}
+....
+
+Description::
+Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-scalar
+
+== vnsra.wi
+
+Mnemonic::
+--
+    vnsra.wi vd, vs2, uimm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x2d, attr: 'funct6'},
+]}
+....
+
+Description::
+Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-immediate
+
+
+
+== Vector Integer Compare Instructions
+
+== vmseq.vv
+
+Mnemonic::
+--
+    vmseq.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x18, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if equal, Vector-vector
+
+== vmseq.vx
+
+Mnemonic::
+--
+    vmseq.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x18, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if equal, vector-scalar
+
+== vmseq.vi
+
+Mnemonic::
+--
+    vmseq.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x18, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if equal, vector-immediate
+
+== vmsne.vv
+
+Mnemonic::
+--
+    vmsne.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x19, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if not equal, Vector-vector
+
+== vmsne.vx
+
+Mnemonic::
+--
+    vmsne.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x19, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Set if not equal, vector-scalar
+
+== vmsne.vi
+
+Mnemonic::
+--
+    vmsne.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x19, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if not equal, vector-immediate
+
+== vmsltu.vv
+
+Mnemonic::
+--
+    vmsltu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1a, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than, unsigned, Vector-vector
+
+== vmsltu.vx
+
+Mnemonic::
+--
+    vmsltu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1a, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than, unsigned, Vector-scalar
+
+== vmslt.vv
+
+Mnemonic::
+--
+    vmslt.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1b, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than, signed, Vector-vector
+
+== vmslt.vx
+
+Mnemonic::
+--
+    vmslt.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1b, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than, signed, vector-scalar
+
+== vmsleu.vv
+
+Mnemonic::
+--
+    vmsleu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1c, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than or equal, unsigned, Vector-vector
+
+== vmsleu.vx
+
+Mnemonic::
+--
+    vmsleu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1c, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than or equal, unsigned, vector-scalar
+
+== vmsleu.vi
+
+Mnemonic::
+--
+    vmsleu.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1c, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than or equal, unsigned, Vector-immediate
+
+== vmsle.vv
+
+Mnemonic::
+--
+    vmsle.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1d, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than or equal, signed, Vector-vector
+
+== vmsle.vx
+
+Mnemonic::
+--
+    vmsle.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1d, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than or equal, signed, vector-scalar
+
+== vmsle.vi
+
+Mnemonic::
+--
+    vmsle.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1d, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if less than or equal, signed, vector-immediate
+
+== vmsgtu.vx
+
+Mnemonic::
+--
+    vmsgtu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1e, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if greater than, unsigned, Vector-scalar
+
+== vmsgtu.vi
+
+Mnemonic::
+--
+    vmsgtu.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1e, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if greater than, unsigned, Vector-immediate
+
+== vmsgt.vx
+
+Mnemonic::
+--
+    vmsgt.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1f, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if greater than, signed, Vector-scalar
+
+== vmsgt.vi
+
+Mnemonic::
+--
+    vmsgt.vi vd, vs2, imm, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x1f, attr: 'funct6'},
+]}
+....
+
+Description::
+Set if greater than, signed, Vector-immediate
+
+
+
+== Vector Integer Min/Max Instructions
+
+Signed and unsigned integer minimum and maximum instructions are
+supported.
+
+== vminu.vv
+
+Mnemonic::
+--
+    vminu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x04, attr: 'funct6'},
+]}
+....
+
+Description::
+ Unsigned minimum, Vector-vector
+
+== vminu.vx
+
+Mnemonic::
+--
+    vminu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x04, attr: 'funct6'},
+]}
+....
+
+Description::
+ Unsigned minimum, vector-scalar
+
+== vmin.vv
+
+Mnemonic::
+--
+    vmin.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x05, attr: 'funct6'},
+]}
+....
+
+Description::
+Signed minimum, Vector-vector
+
+== vmin.vx
+
+Mnemonic::
+--
+    vmin.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x05, attr: 'funct6'},
+]}
+....
+
+Description::
+Signed minimum, vector-scalar
+
+== vmaxu.vv
+
+Mnemonic::
+--
+    vmaxu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x06, attr: 'funct6'},
+]}
+....
+
+Description::
+ Unsigned maximum, Vector-vector
+
+== vmaxu.vx
+
+Mnemonic::
+--
+    vmaxu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x06, attr: 'funct6'},
+]}
+....
+
+Description::
+ Unsigned maximum, vector-scalar
+
+== vmax.vv
+
+Mnemonic::
+--
+    vmax.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x07, attr: 'funct6'},
+]}
+....
+
+Description::
+Signed maximum, Vector-vector
+
+== vmax.vx
+
+Mnemonic::
+--
+    vmax.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0x1, attr: 'vm'},
+  {bits: 6, name: 0x07, attr: 'funct6'},
+]}
+....
+
+Description::
+Signed maximum, vector-scalar
