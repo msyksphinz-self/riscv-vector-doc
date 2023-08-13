@@ -1,0 +1,916 @@
+== Vector Single-Width Integer Multiply Instructions
+
+=== vmul.vv
+
+Mnemonic::
+--
+    vmul.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x25: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed multiply, returning low bits of product, Vector-vector
+
+=== vmul.vx
+
+Mnemonic::
+--
+    vmul.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x25: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed multiply, returning low bits of product, vector-scalar
+
+=== vmulh.vv
+
+Mnemonic::
+--
+    vmulh.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x27: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed multiply, returning high bits of product, Vector-vector
+
+=== vmulh.vx
+
+Mnemonic::
+--
+    vmulh.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x27: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed multiply, returning high bits of product, vector-scalar
+
+=== vmulhu.vv
+
+Mnemonic::
+--
+    vmulhu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x24: attr: 'funct6'},
+]}
+....
+
+Description::
+Unsigned multiply, returning high bits of product, Vector-vector
+
+=== vmulhu.vx
+
+Mnemonic::
+--
+    vmulhu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x24: attr: 'funct6'},
+]}
+....
+
+Description::
+Unsigned multiply, returning high bits of product, vector-scalar
+
+=== vmulhsu.vv
+
+Mnemonic::
+--
+    vmulhsu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x26: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed(vs2)-Unsigned multiply, returning high bits of product, Vector-vector
+
+=== vmulhsu.vx
+
+Mnemonic::
+--
+    vmulhsu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x26: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed(vs2)-Unsigned multiply, returning high bits of product, vector-scalar
+
+
+== Vector Integer Divide Instructions
+
+=== vdivu.vv
+
+Mnemonic::
+--
+    vdivu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x20: attr: 'funct6'},
+]}
+....
+
+Description::
+Unsigned divide, Vector-vector
+
+=== vdivu.vx
+
+Mnemonic::
+--
+    vdivu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x20: attr: 'funct6'},
+]}
+....
+
+Description::
+Unsigned divide, vector-scalar
+
+=== vdiv.vv
+
+Mnemonic::
+--
+    vdiv.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x21: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed divide, Vector-vector
+
+=== vdiv.vx
+
+Mnemonic::
+--
+    vdiv.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x21: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed divide, vector-scalar
+
+=== vremu.vv
+
+Mnemonic::
+--
+    vremu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x22: attr: 'funct6'},
+]}
+....
+
+Description::
+Unsigned remainder, Vector-vector
+
+=== vremu.vx
+
+Mnemonic::
+--
+    vremu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x22: attr: 'funct6'},
+]}
+....
+
+Description::
+Unsigned remainder, vector-scalar
+
+=== vrem.vv
+
+Mnemonic::
+--
+    vrem.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x23: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed remainder, Vector-vector
+
+=== vrem.vx
+
+Mnemonic::
+--
+    vrem.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x23: attr: 'funct6'},
+]}
+....
+
+Description::
+Signed remainder, vector-scalar
+
+
+== Vector Widening Integer Multiply Instructions
+
+=== vwmul.vv
+
+Mnemonic::
+--
+    vwmul.vv   vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3b, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed-integer multiply, vector-vector
+
+=== vwmul.vx
+
+Mnemonic::
+--
+    vwmul.vx   vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3b, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed-integer multiply, vector-scalar
+
+=== vwmulu.vv
+
+Mnemonic::
+--
+    vwmulu.vv  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x38, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned-integer multiply, vector-vector
+
+=== vwmulu.vx
+
+Mnemonic::
+--
+    vwmulu.vx  vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x38, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned-integer multiply, vector-scalar
+
+=== vwmulsu.vv
+
+Mnemonic::
+--
+    vwmulsu.vv vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3a, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed(vs2)-unsigned integer multiply, vector-vector
+
+=== vwmulsu.vx
+
+Mnemonic::
+--
+    vwmulsu.vx vd, vs2, rs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3a, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed(vs2)-unsigned integer multiply, vector-scalar
+
+== Vector Single-Width Integer Multiply-Add Instructions
+
+=== vmacc.vv
+
+Mnemonic::
+--
+    vmacc.vv vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x2d, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-add, overwrite addend.
+vd[i] = +(vs1[i] * vs2[i]) + vd[i]
+
+=== vmacc.vx
+
+Mnemonic::
+--
+    vmacc.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x2d, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-add, overwrite addend.
+vd[i] = +(x[rs1] * vs2[i]) + vd[i]
+
+=== vnmsac.vv
+
+Mnemonic::
+--
+    vnmsac.vv vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x2f, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-sub, overwrite minuend.
+vd[i] = -(vs1[i] * vs2[i]) + vd[i]
+
+=== vnmsac.vx
+
+Mnemonic::
+--
+    vnmsac.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x2f, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-sub, overwrite minuend.
+vd[i] = -(x[rs1] * vs2[i]) + vd[i]
+
+=== vmadd.vv
+
+Mnemonic::
+--
+    vmadd.vv vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x29, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-add, overwrite multiplicand.
+vd[i] = (vs1[i] * vd[i]) + vs2[i]
+
+=== vmadd.vx
+
+Mnemonic::
+--
+    vmadd.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x29, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-add, overwrite multiplicand.
+vd[i] = (x[rs1] * vd[i]) + vs2[i]
+
+=== vnmsub.vv
+
+Mnemonic::
+--
+    vnmsub.vv vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x2b, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-sub, overwrite multiplicand.
+vd[i] = -(vs1[i] * vd[i]) + vs2[i]
+
+=== vnmsub.vx
+
+Mnemonic::
+--
+    vnmsub.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x2b, attr: 'funct6'},
+]}
+....
+
+Description::
+Integer multiply-sub, overwrite multiplicand.
+vd[i] = -(x[rs1] * vd[i]) + vs2[i]
+
+
+== Vector Widening Integer Multiply-Add Instructions
+
+=== vwmaccu.vv
+
+Mnemonic::
+--
+    vwmaccu.vv vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3c, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned-integer multiply-add, overwrite addend.
+vd[i] = +(vs1[i] * vs2[i]) + vd[i]
+
+=== vwmaccu.vx
+
+Mnemonic::
+--
+    vwmaccu.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3c, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned-integer multiply-add, overwrite addend.
+vd[i] = +(x[rs1] * vs2[i]) + vd[i]
+
+=== vwmacc.vv
+
+Mnemonic::
+--
+    vwmacc.vv  vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3d, attr: 'funct6'},
+]}
+....
+
+
+Description::
+Widening signed-integer multiply-add, overwrite addend.
+vd[i] = +(vs1[i] * vs2[i]) + vd[i]
+
+=== vwmacc.vx
+
+Mnemonic::
+--
+    vwmacc.vx  vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3d, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed-integer multiply-add, overwrite addend.
+vd[i] = +(x[rs1] * vs2[i]) + vd[i]
+
+=== vwmaccsu.vv
+
+Mnemonic::
+--
+    vwmaccsu.vv vd, vs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3f, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed-unsigned-integer multiply-add, overwrite addend.
+vd[i] = +(signed(vs1[i]) * unsigned(vs2[i])) + vd[i]
+
+=== vwmaccsu.vx
+
+Mnemonic::
+--
+    vwmaccsu.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3f, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening signed-unsigned-integer multiply-add, overwrite addend.
+vd[i] = +(signed(x[rs1]) * unsigned(vs2[i])) + vd[i]
+
+=== vwmaccus.vx
+
+Mnemonic::
+--
+    vwmaccus.vx vd, rs1, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x3e, attr: 'funct6'},
+]}
+....
+
+Description::
+Widening unsigned-signed-integer multiply-add, overwrite addend.
+vd[i] = +(unsigned(x[rs1]) * signed(vs2[i])) + vd[i]
