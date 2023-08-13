@@ -1,0 +1,142 @@
+== Vector Integer Merge Instructions
+
+=== vmerge.vvm
+Mnemonic::
+--
+    vmerge.vvm vd, vs2, vs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0, attr: 'vm'},
+  {bits: 6, name: 0x17, attr: 'funct6'},
+]}
+....
+
+Description::
+vd[i] = v0.mask[i] ? vs1[i] : vs2[i]
+
+=== vmerge.vxm
+Mnemonic::
+--
+    vmerge.vxm vd, vs2, rs1, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0, attr: 'vm'},
+  {bits: 6, name: 0x17, attr: 'funct6'},
+]}
+....
+
+Description::
+vd[i] = v0.mask[i] ? x[rs1] : vs2[i]
+
+=== vmerge.vim
+Mnemonic::
+--
+    vmerge.vim vd, vs2, imm, v0
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 0, attr: 'vm'},
+  {bits: 6, name: 0x17, attr: 'funct6'},
+]}
+....
+
+Description::
+vd[i] = v0.mask[i] ? imm    : vs2[i]
+
+== Vector Integer Move Instructions
+
+=== vmv.v.v
+
+Mnemonic::
+--
+    vmv.v.v vd, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 6, name: 0x17, attr: 'funct6'},
+]}
+....
+
+Description::
+vd[i] = vs1[i]
+=== vmv.v.x
+
+Mnemonic::
+--
+    vmv.v.x vd, rs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 6, name: 0x17, attr: 'funct6'},
+]}
+....
+
+Description::
+vd[i] = x[rs1]
+=== vmv.v.i
+
+Mnemonic::
+--
+    vmv.v.i vd, imm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 1, attr: 'vm'},
+  {bits: 6, name: 0x17, attr: 'funct6'},
+]}
+....
+
+Description::
+vd[i] = imm

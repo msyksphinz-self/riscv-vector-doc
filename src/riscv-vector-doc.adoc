@@ -32,3 +32,5 @@ include::vec_int.adoc[]
 include::vec_int_logical.adoc[]
 
 include::vec_int_muldiv.adoc[]
+
+include::vec_int_others.adoc[]
