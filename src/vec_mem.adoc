@@ -1,8 +1,5 @@
 == Vector Unit-Stride Instructions
 
-https://github.com/riscv-non-isa/rvv-intrinsic-doc/blob/main/auto-generated/intrinsic_funcs/01_vector_loads_and_stores_functions.md#vector-unit-stride-load-functions
-
-
 === vle8.v
 
 Mnemonic::
@@ -29,6 +26,8 @@ Encoding::
 Description::
 8-bit unit-stride load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle8_v.h[]
 
 === vle16.v
 
@@ -57,6 +56,9 @@ Encoding::
 Description::
 16-bit unit-stride load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle16_v.h[]
+
 === vle32.v
 
 Mnemonic::
@@ -84,6 +86,9 @@ Encoding::
 Description::
 32-bit unit-stride load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle32_v.h[]
+
 === vle64.v
 
 Mnemonic::
@@ -110,6 +115,9 @@ Encoding::
 
 Description::
 64-bit unit-stride load
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle64_v.h[]
 
 === vse8.v
 
@@ -139,6 +147,9 @@ Encoding::
 Description::
 8-bit unit-stride store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse8_v.h[]
+
 === vse16.v
 
 Mnemonic::
@@ -164,6 +175,9 @@ Encoding::
 
 Description::
 16-bit unit-stride store
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse16_v.h[]
 
 === vse32.v
 
@@ -192,6 +206,9 @@ Encoding::
 Description::
 32-bit unit-stride store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse32_v.h[]
+
 === vse64.v
 
 Mnemonic::
@@ -218,6 +235,9 @@ Encoding::
 
 Description::
 64-bit unit-stride store
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse64_v.h[]
 
 === vlm.v
 
@@ -246,6 +266,10 @@ Description::
 Vector unit-stride mask load
 Load byte vector of length ceil(vl/8)
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlm_v.h[]
+
+
 === vsm.v
 
 Mnemonic::
@@ -272,6 +296,9 @@ Encoding::
 Description::
 Vector unit-stride mask store
 Store byte vector of length ceil(vl/8)
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsm_v.h[]
 
 == Vector Strided Instructions
 
@@ -300,6 +327,9 @@ Encoding::
 Description::
 8-bit strided load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse8_v.h[]
+
 === vlse16.v
 
 Mnemonic::
@@ -326,6 +356,9 @@ Encoding::
 Description::
 16-bit strided load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse16_v.h[]
+
 === vlse32.v
 Mnemonic::
 --
@@ -350,6 +383,9 @@ Encoding::
 
 Description::
 32-bit strided load
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse32_v.h[]
 
 === vlse64.v
 Mnemonic::
@@ -376,6 +412,9 @@ Encoding::
 Description::
 64-bit strided load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse64_v.h[]
+
 === vsse8.v
 Mnemonic::
 --
@@ -400,6 +439,9 @@ Encoding::
 
 Description::
 8-bit strided store
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse8_v.h[]
 
 === vsse16.v
 Mnemonic::
@@ -426,6 +468,9 @@ Encoding::
 Description::
 16-bit strided store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse16_v.h[]
+
 === vsse32.v
 Mnemonic::
 --
@@ -451,6 +496,9 @@ Encoding::
 Description::
 32-bit strided store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse32_v.h[]
+
 === vsse64.v
 Mnemonic::
 --
@@ -475,6 +523,9 @@ Encoding::
 
 Description::
 64-bit strided store
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse64_v.h[]
 
 == Vector Indexed Instructions
 
@@ -504,6 +555,9 @@ Encoding::
 Description::
 unordered  8-bit indexed load of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei8_v.h[]
+
 === vluxei16.v
 
 Mnemonic::
@@ -530,6 +584,9 @@ Encoding::
 Description::
 unordered 16-bit indexed load of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei16_v.h[]
+
 === vluxei32.v
 Mnemonic::
 --
@@ -554,6 +611,9 @@ Encoding::
 
 Description::
 unordered 32-bit indexed load of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei32_v.h[]
 
 === vluxei64.v
 Mnemonic::
@@ -580,6 +640,9 @@ Encoding::
 Description::
 unordered 64-bit indexed load of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei64_v.h[]
+
 === vloxei8.v
 Mnemonic::
 --
@@ -604,6 +667,11 @@ Encoding::
 
 Description::
 ordered  8-bit indexed load of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei8_v.h[]
+
+
 === vloxei16.v
 Mnemonic::
 --
@@ -628,6 +696,9 @@ Encoding::
 
 Description::
 ordered 16-bit indexed load of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei16_v.h[]
 
 === vloxei32.v
 Mnemonic::
@@ -654,6 +725,9 @@ Encoding::
 Description::
 ordered 32-bit indexed load of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei32_v.h[]
+
 === vloxei64.v
 Mnemonic::
 --
@@ -678,6 +752,9 @@ Encoding::
 
 Description::
 ordered 64-bit indexed load of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei64_v.h[]
 
 === vsuxei8.v
 Mnemonic::
@@ -705,6 +782,9 @@ Encoding::
 Description::
 unordered  8-bit indexed store of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei8_v.h[]
+
 === vsuxei16.v
 Mnemonic::
 --
@@ -729,6 +809,9 @@ Encoding::
 
 Description::
 unordered 16-bit indexed store of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei16_v.h[]
 
 === vsuxei32.v
 Mnemonic::
@@ -755,6 +838,9 @@ Encoding::
 Description::
 unordered 32-bit indexed store of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei32_v.h[]
+
 === vsuxei64.v
 Mnemonic::
 --
@@ -779,6 +865,9 @@ Encoding::
 
 Description::
 unordered 64-bit indexed store of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei64_v.h[]
 
 === vsoxei8.v
 Mnemonic::
@@ -805,6 +894,9 @@ Encoding::
 Description::
 ordered  8-bit indexed store of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei8_v.h[]
+
 === vsoxei16.v
 Mnemonic::
 --
@@ -829,6 +921,9 @@ Encoding::
 
 Description::
 ordered 16-bit indexed store of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei16_v.h[]
 
 === vsoxei32.v
 
@@ -856,6 +951,9 @@ Encoding::
 Description::
 ordered 32-bit indexed store of SEW data
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei16_v.h[]
+
 === vsoxei64.v
 
 Mnemonic::
@@ -881,6 +979,9 @@ Encoding::
 
 Description::
 ordered 64-bit indexed store of SEW data
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei64_v.h[]
 
 == Unit-stride Fault-Only-First Loads
 
@@ -910,6 +1011,9 @@ Encoding::
 Description::
 8-bit unit-stride fault-only-first load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle8ff_v.h[]
+
 === vle16ff.v
 
 Mnemonic::
@@ -935,6 +1039,9 @@ Encoding::
 
 Description::
 16-bit unit-stride fault-only-first load
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle16ff_v.h[]
 
 === vle32ff.v
 
@@ -962,6 +1069,9 @@ Encoding::
 Description::
 32-bit unit-stride fault-only-first load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle32ff_v.h[]
+
 === vle64ff.v
 
 Mnemonic::
@@ -987,6 +1097,9 @@ Encoding::
 
 Description::
 64-bit unit-stride fault-only-first load
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle64ff_v.h[]
 
 == Vector Unit-Stride Segment Loads and Stores
 
@@ -1022,6 +1135,9 @@ Encoding::
 Description::
 8-bit Unit-stride segment load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle8_v.h[]
+
 === vlseg<nf>e16.v
 
 Mnemonic::
@@ -1053,6 +1169,9 @@ Encoding::
 
 Description::
 16-bit Unit-stride segment load
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle16_v.h[]
 
 === vlseg<nf>e32.v
 
@@ -1086,6 +1205,9 @@ Encoding::
 Description::
 32-bit Unit-stride segment load
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle32_v.h[]
+
 === vlseg<nf>e64.v
 
 Mnemonic::
@@ -1117,6 +1239,9 @@ Encoding::
 
 Description::
 64-bit Unit-stride segment load
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vle64_v.h[]
 
 === vsseg<nf>e8.v
 
@@ -1150,6 +1275,9 @@ Encoding::
 Description::
 8-bit Unit-stride segment store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse8_v.h[]
+
 === vsseg<nf>e16.v
 
 Mnemonic::
@@ -1181,6 +1309,9 @@ Encoding::
 
 Description::
 16-bit Unit-stride segment store
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse16_v.h[]
 
 === vsseg<nf>e32.v
 
@@ -1215,6 +1346,9 @@ Encoding::
 Description::
 32-bit Unit-stride segment store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse32_v.h[]
+
 
 === vsseg<nf>e64.v
 
@@ -1248,6 +1382,8 @@ Encoding::
 Description::
 64-bit Unit-stride segment store
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vse64_v.h[]
 
 == Vector Strided Segment Loads and Stores
 
@@ -1280,6 +1416,8 @@ Encoding::
 ]}
 ....
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse8_v.h[]
 
 === vlsseg<nf>e16.v
 
@@ -1313,6 +1451,9 @@ Encoding::
 Description::
 16-bit Strided segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse16_v.h[]
+
 === vlsseg<nf>e32.v
 
 Mnemonic::
@@ -1344,6 +1485,9 @@ Encoding::
 
 Description::
 32-bit Strided segment loads
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse32_v.h[]
 
 === vlsseg<nf>e64.v
 
@@ -1377,6 +1521,9 @@ Encoding::
 Description::
 64-bit Strided segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vlse64_v.h[]
+
 === vssseg2e8.v
 
 Mnemonic::
@@ -1409,6 +1556,8 @@ Encoding::
 Description::
 8-bit strided segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse8_v.h[]
 
 === vssseg2e16.v
 
@@ -1442,6 +1591,8 @@ Encoding::
 Description::
 16-bit strided segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse16_v.h[]
 
 === vssseg2e32.v
 
@@ -1475,6 +1626,8 @@ Encoding::
 Description::
 32-bit strided segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse32_v.h[]
 
 === vssseg2e64.v
 
@@ -1508,6 +1661,9 @@ Encoding::
 Description::
 64-bit strided segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsse64_v.h[]
+
 == Vector Indexed Segment Loads and Stores
 
 Mnemonic::
@@ -1540,6 +1696,9 @@ Encoding::
 Description::
 Indexed-unordered segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei8_v.h[]
+
 Mnemonic::
 --
 	vluxseg2ei16.v vd, (rs1), vs2, vm	# nf=2
@@ -1569,6 +1728,9 @@ Encoding::
 
 Description::
 Indexed-unordered segment loads
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei16_v.h[]
 
 Mnemonic::
 --
@@ -1601,6 +1763,9 @@ Encoding::
 Description::
 Indexed-unordered segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei32_v.h[]
+
 Mnemonic::
 --
 	vluxseg2ei64.v vd, (rs1), vs2, vm	# nf=2
@@ -1630,6 +1795,9 @@ Encoding::
 
 Description::
 Indexed-unordered segment loads
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vluxei64_v.h[]
 
 === vloxseg<nf>ei8.v
 
@@ -1664,6 +1832,8 @@ Encoding::
 Description::
 Indexed-ordered segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei8_v.h[]
 
 === vloxseg<nf>ei16.v
 
@@ -1698,6 +1868,8 @@ Encoding::
 Description::
 Indexed-ordered segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei16_v.h[]
 
 === vloxseg<nf>ei32.v
 
@@ -1732,6 +1904,9 @@ Encoding::
 Description::
 Indexed-ordered segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei32_v.h[]
+
 === vloxseg<nf>ei64.v
 
 Mnemonic::
@@ -1765,6 +1940,9 @@ Encoding::
 Description::
 Indexed-ordered segment loads
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vloxei64_v.h[]
+
 === vsuxseg<nf>ei8.v
 
 Mnemonic::
@@ -1797,6 +1975,8 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei8_v.h[]
 
 === vsuxseg<nf>ei16.v
 
@@ -1830,6 +2010,9 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei16_v.h[]
+
 === vsuxseg<nf>ei32.v
 
 Mnemonic::
@@ -1862,6 +2045,8 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei32_v.h[]
 
 === vsuxseg<nf>ei64.v
 
@@ -1895,6 +2080,8 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsuxei64_v.h[]
 
 === vsoxseg<nf>ei8.v
 
@@ -1928,6 +2115,8 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei8_v.h[]
 
 === vsoxseg<nf>ei16.v
 
@@ -1961,6 +2150,9 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei16_v.h[]
+
 === vsoxseg<nf>ei32.v
 
 Mnemonic::
@@ -1993,6 +2185,8 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei32_v.h[]
 
 === vsoxseg<nf>ei64.v
 
@@ -2026,6 +2220,9 @@ Encoding::
 Description::
 Indexed-unordered segment stores
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsoxei64_v.h[]
+
 == Vector Load/Store Whole Register Instructions
 
 === vl1re8.v
@@ -2054,6 +2251,9 @@ Encoding::
 Description::
 Load `vd` with VLEN/8 bytes held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl1re8_v.h[]
+
 === vl1re16.v
 
 Mnemonic::
@@ -2079,6 +2279,9 @@ Encoding::
 
 Description::
 Load `vd` with VLEN/16 halfwords held at address in `rs1`
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl1re16_v.h[]
 
 === vl1re32.v
 
@@ -2107,6 +2310,9 @@ Encoding::
 Description::
 Load `vd` with VLEN/32 words held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl1re32_v.h[]
+
 === vl1re64.v
 
 Mnemonic::
@@ -2134,6 +2340,9 @@ Encoding::
 Description::
 Load `vd` with VLEN/64 doublewords held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl1re64_v.h[]
+
 === vl2re8.v
 
 Mnemonic::
@@ -2160,6 +2369,9 @@ Encoding::
 Description::
 Load `vd`-`vd+1` with VLEN/8 bytes held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl2re8_v.h[]
+
 === vl2re16.v
 
 Mnemonic::
@@ -2185,6 +2397,9 @@ Encoding::
 
 Description::
 Load `vd`-`vd+1` with VLEN/16 halfwords held at address in `rs1`
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl2re16_v.h[]
 
 === vl2re32.v
 
@@ -2213,6 +2428,9 @@ Encoding::
 Description::
 Load `vd`-`vd+1` with VLEN/32 words held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl2re32_v.h[]
+
 === vl2re64.v
 
 Mnemonic::
@@ -2239,6 +2457,9 @@ Encoding::
 
 Description::
 Load `vd`-`vd+1` with VLEN/64 doublewords held at address in `rs1`
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl2re64_v.h[]
 
 
 === vl4re8.v
@@ -2267,6 +2488,9 @@ Encoding::
 Description::
 Load `vd`-`vd+3` with VLEN/8 bytes held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl4re8_v.h[]
+
 === vl4re16.v
 
 Mnemonic::
@@ -2292,6 +2516,9 @@ Encoding::
 
 Description::
 Load `vd`-`vd+3` with VLEN/16 halfwords held at address in `rs1`
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl4re16_v.h[]
 
 === vl4re32.v
 
@@ -2320,6 +2547,9 @@ Encoding::
 Description::
 Load `vd`-`vd+3` with VLEN/32 words held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl4re32_v.h[]
+
 === vl4re64.v
 
 Mnemonic::
@@ -2347,6 +2577,8 @@ Encoding::
 Description::
 Load `vd`-`vd+3` with VLEN/64 doublewords held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl4re64_v.h[]
 
 === vl8re8.v
 
@@ -2374,6 +2606,9 @@ Encoding::
 Description::
 Load `vd`-`vd+7` with VLEN/8 bytes held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl8re8_v.h[]
+
 === vl8re16.v
 
 Mnemonic::
@@ -2399,6 +2634,9 @@ Encoding::
 
 Description::
 Load `vd`-`vd+7` with VLEN/16 halfwords held at address in `rs1`
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl8re16_v.h[]
 
 === vl8re32.v
 
@@ -2427,6 +2665,9 @@ Encoding::
 Description::
 Load `vd`-`vd+7` with VLEN/32 words held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl8re32_v.h[]
+
 === vl8re64.v
 
 Mnemonic::
@@ -2454,6 +2695,8 @@ Encoding::
 Description::
 Load `vd`-`vd+7` with VLEN/64 doublewords held at address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vl8re64_v.h[]
 
 === vs1r.v
 
@@ -2481,6 +2724,8 @@ Encoding::
 Description::
 Store `vs3` to address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vs1r_v.h[]
 
 === vs2r.v
 
@@ -2508,6 +2753,8 @@ Encoding::
 Description::
 Store `vs3`-`vs3+1` to address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vs2r_v.h[]
 
 === vs4r.v
 
@@ -2535,6 +2782,8 @@ Encoding::
 Description::
 Store `vs3`-`vs3+3` to address in `rs1`
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vs4r_v.h[]
 
 === vs8r.v
 
@@ -2561,3 +2810,6 @@ Encoding::
 
 Description::
 Store `vs3`-`vs3+7` to address in `rs1`
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vs8r_v.h[]
