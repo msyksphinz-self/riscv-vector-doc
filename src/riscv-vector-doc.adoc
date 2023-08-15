@@ -36,3 +36,5 @@ include::vec_int_muldiv.adoc[]
 include::vec_int_others.adoc[]
 
 include::vec_fixed.adoc[]
+
+include::vec_float.adoc[]
