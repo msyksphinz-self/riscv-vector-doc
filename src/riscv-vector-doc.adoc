@@ -38,3 +38,5 @@ include::vec_int_others.adoc[]
 include::vec_fixed.adoc[]
 
 include::vec_float.adoc[]
+
+include::vec_reduc.adoc[]

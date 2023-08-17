@@ -1,0 +1,443 @@
+= Vector Reduction Operations
+
+== Vector Single-Width Integer Reduction Instructions
+
+=== vredsum.vs
+
+Mnemonic::
+--
+    vredsum.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x00, attr: 'vredsum.vs'},
+]}
+....
+
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredsum_vs.h[]
+
+Description::
+vd[0] =  sum( vs1[0] , vs2[*] )
+
+=== vredmaxu.vs
+
+Mnemonic::
+--
+    vredmaxu.vs vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x06, attr: 'vredmaxu.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredmaxu_vs.h[]
+
+Description::
+vd[0] = maxu( vs1[0] , vs2[*] )
+
+=== vredmax.vs
+
+Mnemonic::
+--
+    vredmax.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x07, attr: 'vredmax.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredmax_vs.h[]
+
+Description::
+vd[0] =  max( vs1[0] , vs2[*] )
+
+=== vredminu.vs
+
+Mnemonic::
+--
+    vredminu.vs vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x04, attr: 'vredminu'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredminu_vs.h[]
+
+Description::
+vd[0] = minu( vs1[0] , vs2[*] )
+
+=== vredmin.vs
+
+Mnemonic::
+--
+    vredmin.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x05, attr: 'vredmin.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredmin_vs.h[]
+
+Description::
+vd[0] =  min( vs1[0] , vs2[*] )
+
+=== vredand.vs
+
+Mnemonic::
+--
+    vredand.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x01, attr: 'vredand.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredand_vs.h[]
+
+Description::
+vd[0] =  and( vs1[0] , vs2[*] )
+
+=== vredor.vs
+
+Mnemonic::
+--
+    vredor.vs   vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x02, attr: 'vredor.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredor_vs.h[]
+
+Description::
+vd[0] =   or( vs1[0] , vs2[*] )
+
+=== vredxor.vs
+
+Mnemonic::
+--
+    vredxor.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x03, attr: 'vredxor.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vredxor_vs.h[]
+
+Description::
+vd[0] =  xor( vs1[0] , vs2[*] )
+
+
+== Vector Widening Integer Reduction Instructions
+
+=== vwredsumu.vs
+
+Mnemonic::
+--
+    vwredsumu.vs vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x30, attr: 'vwredsumu.vs'},
+]}
+....
+
+Description::
+Unsigned sum reduction into double-width accumulator
+
+2*SEW = 2*SEW + sum(zero-extend(SEW))
+
+=== vwredsum.vs
+
+Mnemonic::
+--
+    vwredsum.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x31, attr: 'vwredsum.vs'},
+]}
+....
+
+Description::
+Signed sum reduction into double-width accumulator
+
+2*SEW = 2*SEW + sum(sign-extend(SEW))
+
+
+== Vector Single-Width Floating-Point Reduction Instructions
+
+=== vfredosum.vs
+
+Mnemonic::
+--
+    vfredosum.vs vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x03, attr: 'vfredosum.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfredosum_vs.h[]
+
+Description::
+Ordered sum
+
+=== vfredusum.vs
+
+Mnemonic::
+--
+    vfredusum.vs vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x01, attr: 'vfredusum.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfredusum_vs.h[]
+
+Description::
+Unordered sum
+
+=== vfredmax.vs
+
+Mnemonic::
+--
+    vfredmax.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x07, attr: 'vfredmax.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfredmax_vs.h[]
+
+Description::
+Maximum value
+
+=== vfredmin.vs
+
+Mnemonic::
+--
+    vfredmin.vs  vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x05, attr: 'vfredmin.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfredmin_vs.h[]
+
+Description::
+Minimum value
+
+== Vector Widening Floating-Point Reduction Instructions
+
+=== vfwredosum.vs
+
+Mnemonic::
+--
+    vfwredosum.vs vd, vs2, vs1, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x33, attr: 'vfwredosum.vs'},
+]}
+....
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwredosum_vs.h[]
+
+Description::
+Ordered sum
+
+=== vfwredusum.vs
+
+==== Mnemonic
+--
+    vfwredusum.vs vd, vs2, vs1, vm
+--
+
+==== Encoding
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x31, attr: 'vfwredusum.vs'},
+]}
+....
+
+==== Spike Implementation
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwredusum_vs.h[]
+
+==== Description
+
+Unordered sum
