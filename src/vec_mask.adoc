@@ -1,0 +1,714 @@
+= Vector Mask Instructions
+
+== Vector Mask-Register Logical Instructions
+
+=== vmand.mm
+
+Mnemonic::
+--
+    vmand.mm vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x19, attr: 'vmand'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] =   vs2.mask[i] &&  vs1.mask[i]
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmand_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmand_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmand_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmand_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmand_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmand_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmand_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmand_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+
+=== vmnand.mm
+
+Mnemonic::
+--
+    vmnand.mm vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x1d, attr: 'vmnand'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] = !(vs2.mask[i] &&  vs1.mask[i])
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmnand_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmnand_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmnand_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmnand_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmnand_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmnand_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmnand_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmnand_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+=== vmandn.mm
+
+Mnemonic::
+--
+    vmandn.mm vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x18, attr: 'vmandn'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] =   vs2.mask[i] && !vs1.mask[i]
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmandn_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmandn_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmandn_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmandn_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmandn_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmandn_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmandn_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmandn_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+=== vmxor.mm
+
+Mnemonic::
+--
+    vmxor.mm  vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x1b, attr: 'vmxor'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] =   vs2.mask[i] ^^  vs1.mask[i]
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmxor_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmxor_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmxor_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmxor_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmxor_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmxor_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmxor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmxor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+=== vmor.mm
+
+Mnemonic::
+--
+    vmor.mm  vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x1a, attr: 'vmor'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] =   vs2.mask[i] ||  vs1.mask[i]
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmor_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmor_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmor_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmor_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmor_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmor_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+=== vmnor.mm
+
+Mnemonic::
+--
+    vmnor.mm  vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x1e, attr: 'vmnor'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] = !(vs2.mask[i] ||  vs1.mask[i])
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmnor_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmnor_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmnor_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmnor_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmnor_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmnor_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmnor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmnor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+=== vmorn.mm
+
+Mnemonic::
+--
+    vmorn.mm  vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x1c, attr: 'vmorn'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] =   vs2.mask[i] || !vs1.mask[i]
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmorn_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmorn_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmorn_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmorn_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmorn_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmorn_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmorn_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmorn_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+=== vmxnor.mm
+
+Mnemonic::
+--
+    vmxnor.mm vd, vs2, vs1
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x1f, attr: 'vmxnor'},
+]}
+....
+
+Description::
+--
+    vd.mask[i] = !(vs2.mask[i] ^^  vs1.mask[i])
+--
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmxnor_mm.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmxnor_mm_b1 (vbool1_t op1, vbool1_t op2, size_t vl);
+vbool2_t __riscv_vmxnor_mm_b2 (vbool2_t op1, vbool2_t op2, size_t vl);
+vbool4_t __riscv_vmxnor_mm_b4 (vbool4_t op1, vbool4_t op2, size_t vl);
+vbool8_t __riscv_vmxnor_mm_b8 (vbool8_t op1, vbool8_t op2, size_t vl);
+vbool16_t __riscv_vmxnor_mm_b16 (vbool16_t op1, vbool16_t op2, size_t vl);
+vbool32_t __riscv_vmxnor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
+vbool64_t __riscv_vmxnor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
+--
+
+== vcpop.m
+
+Mnemonic::
+--
+    vcpop.m rd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x08, attr: 'vcpop'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x00, attr: 'VWXUNARY0'},
+]}
+....
+
+Description::
+Vector count population in mask
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vcpop_m.h[]
+
+Intrinsics::
+[source,cpp]
+--
+unsigned long __riscv_vcpop_m_b1 (vbool1_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b2 (vbool2_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b4 (vbool4_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b8 (vbool8_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b16 (vbool16_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b32 (vbool32_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b64 (vbool64_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b1_m (vbool1_t mask, vbool1_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b2_m (vbool2_t mask, vbool2_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b4_m (vbool4_t mask, vbool4_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b8_m (vbool8_t mask, vbool8_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b16_m (vbool16_t mask, vbool16_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
+unsigned long __riscv_vcpop_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
+--
+
+== vfirst.m
+
+Mnemonic::
+--
+    vfirst.m rd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x09, attr: 'vfirst'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x00, attr: 'VWXUNARY0'},
+]}
+....
+
+Description::
+find-first-set mask bit
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfirst_m.h[]
+
+Intrinsics::
+[source,cpp]
+--
+long __riscv_vfirst_m_b1 (vbool1_t op1, size_t vl);
+long __riscv_vfirst_m_b2 (vbool2_t op1, size_t vl);
+long __riscv_vfirst_m_b4 (vbool4_t op1, size_t vl);
+long __riscv_vfirst_m_b8 (vbool8_t op1, size_t vl);
+long __riscv_vfirst_m_b16 (vbool16_t op1, size_t vl);
+long __riscv_vfirst_m_b32 (vbool32_t op1, size_t vl);
+long __riscv_vfirst_m_b64 (vbool64_t op1, size_t vl);
+long __riscv_vfirst_m_b1_m (vbool1_t mask, vbool1_t op1, size_t vl);
+long __riscv_vfirst_m_b2_m (vbool2_t mask, vbool2_t op1, size_t vl);
+long __riscv_vfirst_m_b4_m (vbool4_t mask, vbool4_t op1, size_t vl);
+long __riscv_vfirst_m_b8_m (vbool8_t mask, vbool8_t op1, size_t vl);
+long __riscv_vfirst_m_b16_m (vbool16_t mask, vbool16_t op1, size_t vl);
+long __riscv_vfirst_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
+long __riscv_vfirst_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
+--
+
+== vmsbf.m
+
+Mnemonic::
+--
+    vmsbf.m vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x01, attr: 'vmsbf'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x14, attr: 'VMUNARY0'},
+]}
+....
+
+Description::
+set-before-first mask bit
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsbf_m.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmsbf_m_b1 (vbool1_t op1, size_t vl);
+vbool2_t __riscv_vmsbf_m_b2 (vbool2_t op1, size_t vl);
+vbool4_t __riscv_vmsbf_m_b4 (vbool4_t op1, size_t vl);
+vbool8_t __riscv_vmsbf_m_b8 (vbool8_t op1, size_t vl);
+vbool16_t __riscv_vmsbf_m_b16 (vbool16_t op1, size_t vl);
+vbool32_t __riscv_vmsbf_m_b32 (vbool32_t op1, size_t vl);
+vbool64_t __riscv_vmsbf_m_b64 (vbool64_t op1, size_t vl);
+vbool1_t __riscv_vmsbf_m_b1_m (vbool1_t mask, vbool1_t op1, size_t vl);
+vbool2_t __riscv_vmsbf_m_b2_m (vbool2_t mask, vbool2_t op1, size_t vl);
+vbool4_t __riscv_vmsbf_m_b4_m (vbool4_t mask, vbool4_t op1, size_t vl);
+vbool8_t __riscv_vmsbf_m_b8_m (vbool8_t mask, vbool8_t op1, size_t vl);
+vbool16_t __riscv_vmsbf_m_b16_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vbool32_t __riscv_vmsbf_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vbool64_t __riscv_vmsbf_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
+--
+
+== vmsif.m
+
+Mnemonic::
+--
+    vmsif.m vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x03, attr: 'vmsif'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x14, attr: 'VMUNARY0'},
+]}
+....
+
+Description::
+set-including-first mask bit
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsif_m.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmsif_m_b1 (vbool1_t op1, size_t vl);
+vbool2_t __riscv_vmsif_m_b2 (vbool2_t op1, size_t vl);
+vbool4_t __riscv_vmsif_m_b4 (vbool4_t op1, size_t vl);
+vbool8_t __riscv_vmsif_m_b8 (vbool8_t op1, size_t vl);
+vbool16_t __riscv_vmsif_m_b16 (vbool16_t op1, size_t vl);
+vbool32_t __riscv_vmsif_m_b32 (vbool32_t op1, size_t vl);
+vbool64_t __riscv_vmsif_m_b64 (vbool64_t op1, size_t vl);
+vbool1_t __riscv_vmsif_m_b1_m (vbool1_t mask, vbool1_t op1, size_t vl);
+vbool2_t __riscv_vmsif_m_b2_m (vbool2_t mask, vbool2_t op1, size_t vl);
+vbool4_t __riscv_vmsif_m_b4_m (vbool4_t mask, vbool4_t op1, size_t vl);
+vbool8_t __riscv_vmsif_m_b8_m (vbool8_t mask, vbool8_t op1, size_t vl);
+vbool16_t __riscv_vmsif_m_b16_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vbool32_t __riscv_vmsif_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vbool64_t __riscv_vmsif_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
+--
+
+== vmsof.m
+
+Mnemonic::
+--
+    vmsof.m vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x02, attr: 'vmsof'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x14, attr: 'VMUNARY0'},
+]}
+....
+
+Description::
+set-only-first mask bit
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsof_m.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vbool1_t __riscv_vmsof_m_b1 (vbool1_t op1, size_t vl);
+vbool2_t __riscv_vmsof_m_b2 (vbool2_t op1, size_t vl);
+vbool4_t __riscv_vmsof_m_b4 (vbool4_t op1, size_t vl);
+vbool8_t __riscv_vmsof_m_b8 (vbool8_t op1, size_t vl);
+vbool16_t __riscv_vmsof_m_b16 (vbool16_t op1, size_t vl);
+vbool32_t __riscv_vmsof_m_b32 (vbool32_t op1, size_t vl);
+vbool64_t __riscv_vmsof_m_b64 (vbool64_t op1, size_t vl);
+vbool1_t __riscv_vmsof_m_b1_m (vbool1_t mask, vbool1_t op1, size_t vl);
+vbool2_t __riscv_vmsof_m_b2_m (vbool2_t mask, vbool2_t op1, size_t vl);
+vbool4_t __riscv_vmsof_m_b4_m (vbool4_t mask, vbool4_t op1, size_t vl);
+vbool8_t __riscv_vmsof_m_b8_m (vbool8_t mask, vbool8_t op1, size_t vl);
+vbool16_t __riscv_vmsof_m_b16_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vbool32_t __riscv_vmsof_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vbool64_t __riscv_vmsof_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
+--
+
+== viota.m
+
+Mnemonic::
+--
+    viota.m vd, vs2, vm
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x80, attr: 'viota'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x14, attr: 'VMUNARY0'},
+]}
+....
+
+Desciption::
+Vector Iota Instruction
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/viota_m.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vuint8mf8_t __riscv_viota_m_u8mf8 (vbool64_t op1, size_t vl);
+vuint8mf4_t __riscv_viota_m_u8mf4 (vbool32_t op1, size_t vl);
+vuint8mf2_t __riscv_viota_m_u8mf2 (vbool16_t op1, size_t vl);
+vuint8m1_t __riscv_viota_m_u8m1 (vbool8_t op1, size_t vl);
+vuint8m2_t __riscv_viota_m_u8m2 (vbool4_t op1, size_t vl);
+vuint8m4_t __riscv_viota_m_u8m4 (vbool2_t op1, size_t vl);
+vuint8m8_t __riscv_viota_m_u8m8 (vbool1_t op1, size_t vl);
+vuint16mf4_t __riscv_viota_m_u16mf4 (vbool64_t op1, size_t vl);
+vuint16mf2_t __riscv_viota_m_u16mf2 (vbool32_t op1, size_t vl);
+vuint16m1_t __riscv_viota_m_u16m1 (vbool16_t op1, size_t vl);
+vuint16m2_t __riscv_viota_m_u16m2 (vbool8_t op1, size_t vl);
+vuint16m4_t __riscv_viota_m_u16m4 (vbool4_t op1, size_t vl);
+vuint16m8_t __riscv_viota_m_u16m8 (vbool2_t op1, size_t vl);
+vuint32mf2_t __riscv_viota_m_u32mf2 (vbool64_t op1, size_t vl);
+vuint32m1_t __riscv_viota_m_u32m1 (vbool32_t op1, size_t vl);
+vuint32m2_t __riscv_viota_m_u32m2 (vbool16_t op1, size_t vl);
+vuint32m4_t __riscv_viota_m_u32m4 (vbool8_t op1, size_t vl);
+vuint32m8_t __riscv_viota_m_u32m8 (vbool4_t op1, size_t vl);
+vuint64m1_t __riscv_viota_m_u64m1 (vbool64_t op1, size_t vl);
+vuint64m2_t __riscv_viota_m_u64m2 (vbool32_t op1, size_t vl);
+vuint64m4_t __riscv_viota_m_u64m4 (vbool16_t op1, size_t vl);
+vuint64m8_t __riscv_viota_m_u64m8 (vbool8_t op1, size_t vl);
+vuint8mf8_t __riscv_viota_m_u8mf8_m (vbool64_t mask, vbool64_t op1, size_t vl);
+vuint8mf4_t __riscv_viota_m_u8mf4_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vuint8mf2_t __riscv_viota_m_u8mf2_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vuint8m1_t __riscv_viota_m_u8m1_m (vbool8_t mask, vbool8_t op1, size_t vl);
+vuint8m2_t __riscv_viota_m_u8m2_m (vbool4_t mask, vbool4_t op1, size_t vl);
+vuint8m4_t __riscv_viota_m_u8m4_m (vbool2_t mask, vbool2_t op1, size_t vl);
+vuint8m8_t __riscv_viota_m_u8m8_m (vbool1_t mask, vbool1_t op1, size_t vl);
+vuint16mf4_t __riscv_viota_m_u16mf4_m (vbool64_t mask, vbool64_t op1, size_t vl);
+vuint16mf2_t __riscv_viota_m_u16mf2_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vuint16m1_t __riscv_viota_m_u16m1_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vuint16m2_t __riscv_viota_m_u16m2_m (vbool8_t mask, vbool8_t op1, size_t vl);
+vuint16m4_t __riscv_viota_m_u16m4_m (vbool4_t mask, vbool4_t op1, size_t vl);
+vuint16m8_t __riscv_viota_m_u16m8_m (vbool2_t mask, vbool2_t op1, size_t vl);
+vuint32mf2_t __riscv_viota_m_u32mf2_m (vbool64_t mask, vbool64_t op1, size_t vl);
+vuint32m1_t __riscv_viota_m_u32m1_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vuint32m2_t __riscv_viota_m_u32m2_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vuint32m4_t __riscv_viota_m_u32m4_m (vbool8_t mask, vbool8_t op1, size_t vl);
+vuint32m8_t __riscv_viota_m_u32m8_m (vbool4_t mask, vbool4_t op1, size_t vl);
+vuint64m1_t __riscv_viota_m_u64m1_m (vbool64_t mask, vbool64_t op1, size_t vl);
+vuint64m2_t __riscv_viota_m_u64m2_m (vbool32_t mask, vbool32_t op1, size_t vl);
+vuint64m4_t __riscv_viota_m_u64m4_m (vbool16_t mask, vbool16_t op1, size_t vl);
+vuint64m8_t __riscv_viota_m_u64m8_m (vbool8_t mask, vbool8_t op1, size_t vl);
+--
+
+== vid.v
+
+Mnemonic::
+--
+    vid.v vd, vm  # Write element ID to destination.
+--
+
+Encoding::
+[wavedrom, , svg]
+....
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 0x81, attr: 'vid'},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 0x14, attr: 'VMUNARY0'},
+]}
+....
+
+Description::
+Vector Element Index
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vid_v.h[]
+
+Intrinsics::
+[source,cpp]
+--
+vuint8mf8_t __riscv_vid_v_u8mf8 (size_t vl);
+vuint8mf4_t __riscv_vid_v_u8mf4 (size_t vl);
+vuint8mf2_t __riscv_vid_v_u8mf2 (size_t vl);
+vuint8m1_t __riscv_vid_v_u8m1 (size_t vl);
+vuint8m2_t __riscv_vid_v_u8m2 (size_t vl);
+vuint8m4_t __riscv_vid_v_u8m4 (size_t vl);
+vuint8m8_t __riscv_vid_v_u8m8 (size_t vl);
+vuint16mf4_t __riscv_vid_v_u16mf4 (size_t vl);
+vuint16mf2_t __riscv_vid_v_u16mf2 (size_t vl);
+vuint16m1_t __riscv_vid_v_u16m1 (size_t vl);
+vuint16m2_t __riscv_vid_v_u16m2 (size_t vl);
+vuint16m4_t __riscv_vid_v_u16m4 (size_t vl);
+vuint16m8_t __riscv_vid_v_u16m8 (size_t vl);
+vuint32mf2_t __riscv_vid_v_u32mf2 (size_t vl);
+vuint32m1_t __riscv_vid_v_u32m1 (size_t vl);
+vuint32m2_t __riscv_vid_v_u32m2 (size_t vl);
+vuint32m4_t __riscv_vid_v_u32m4 (size_t vl);
+vuint32m8_t __riscv_vid_v_u32m8 (size_t vl);
+vuint64m1_t __riscv_vid_v_u64m1 (size_t vl);
+vuint64m2_t __riscv_vid_v_u64m2 (size_t vl);
+vuint64m4_t __riscv_vid_v_u64m4 (size_t vl);
+vuint64m8_t __riscv_vid_v_u64m8 (size_t vl);
+vuint8mf8_t __riscv_vid_v_u8mf8_m (vbool64_t mask, size_t vl);
+vuint8mf4_t __riscv_vid_v_u8mf4_m (vbool32_t mask, size_t vl);
+vuint8mf2_t __riscv_vid_v_u8mf2_m (vbool16_t mask, size_t vl);
+vuint8m1_t __riscv_vid_v_u8m1_m (vbool8_t mask, size_t vl);
+vuint8m2_t __riscv_vid_v_u8m2_m (vbool4_t mask, size_t vl);
+vuint8m4_t __riscv_vid_v_u8m4_m (vbool2_t mask, size_t vl);
+vuint8m8_t __riscv_vid_v_u8m8_m (vbool1_t mask, size_t vl);
+vuint16mf4_t __riscv_vid_v_u16mf4_m (vbool64_t mask, size_t vl);
+vuint16mf2_t __riscv_vid_v_u16mf2_m (vbool32_t mask, size_t vl);
+vuint16m1_t __riscv_vid_v_u16m1_m (vbool16_t mask, size_t vl);
+vuint16m2_t __riscv_vid_v_u16m2_m (vbool8_t mask, size_t vl);
+vuint16m4_t __riscv_vid_v_u16m4_m (vbool4_t mask, size_t vl);
+vuint16m8_t __riscv_vid_v_u16m8_m (vbool2_t mask, size_t vl);
+vuint32mf2_t __riscv_vid_v_u32mf2_m (vbool64_t mask, size_t vl);
+vuint32m1_t __riscv_vid_v_u32m1_m (vbool32_t mask, size_t vl);
+vuint32m2_t __riscv_vid_v_u32m2_m (vbool16_t mask, size_t vl);
+vuint32m4_t __riscv_vid_v_u32m4_m (vbool8_t mask, size_t vl);
+vuint32m8_t __riscv_vid_v_u32m8_m (vbool4_t mask, size_t vl);
+vuint64m1_t __riscv_vid_v_u64m1_m (vbool64_t mask, size_t vl);
+vuint64m2_t __riscv_vid_v_u64m2_m (vbool32_t mask, size_t vl);
+vuint64m4_t __riscv_vid_v_u64m4_m (vbool16_t mask, size_t vl);
+vuint64m8_t __riscv_vid_v_u64m8_m (vbool8_t mask, size_t vl);
+--
