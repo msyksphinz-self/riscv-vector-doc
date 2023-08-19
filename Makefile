@@ -5,9 +5,13 @@ DOC = $(PROJECT).html $(PROJECT).pdf
 all: $(DOC)
 
 $(PROJECT).html: $(SOURCE)
-	asciidoctor -r asciidoctor-diagram src/riscv-vector-doc.adoc -o $(PROJECT).html \
-		-a stylesdir="asciidoctor-readthedocs-theme/" \
-		-a sytlesheet=readthedocs.css
+	cd src/ && \
+	asciidoctor \
+		-a stylesdir="$(PWD)/src/readthedocs/" \
+		-a sytlesheet=readthedocs.css \
+		-r asciidoctor-diagram \
+		riscv-vector-doc.adoc
+# -o $(PROJECT).html
 
 # 	pandoc -s -f docbook $(PROJECT).docbook -o $(PROJECT).rst
 # 	sphinx-build -b html . build
