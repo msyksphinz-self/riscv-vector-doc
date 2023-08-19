@@ -1,0 +1,3 @@
+[submodule "asciidoctor-readthedocs-theme"]
+	path = asciidoctor-readthedocs-theme
+	url = https://github.com/uroesch/asciidoctor-readthedocs-theme.git
