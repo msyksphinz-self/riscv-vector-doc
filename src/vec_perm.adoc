@@ -1,4 +1,4 @@
-= Vector Permutation Instructions
+== Vector Permutation Instructions
 
 == Integer Scalar Move Instructions
 

@@ -1,8 +1,8 @@
-= Vector Fixed-Point Arithmetic Instructions
+== Vector Fixed-Point Arithmetic Instructions
 
-== Vector Single-Width Saturating Add and Subtract
+=== Vector Single-Width Saturating Add and Subtract
 
-=== vsaddu.vv
+==== vsaddu.vv
 
 Mnemonic::
 --
@@ -26,7 +26,7 @@ Encoding::
 Description::
 Saturating adds of unsigned integers, Vector-vector
 
-=== vsaddu.vx
+==== vsaddu.vx
 
 Mnemonic::
 --
@@ -50,7 +50,7 @@ Encoding::
 Description::
 Saturating adds of unsigned integers, vector-scalar
 
-=== vsaddu.vi
+==== vsaddu.vi
 
 Mnemonic::
 --
@@ -74,7 +74,7 @@ Encoding::
 Description::
 Saturating adds of unsigned integers, vector-immediate
 
-=== vsadd.vv
+==== vsadd.vv
 
 Mnemonic::
 --
@@ -98,7 +98,7 @@ Encoding::
 Description::
 Saturating adds of signed integers, Vector-vector
 
-=== vsadd.vx
+==== vsadd.vx
 
 Mnemonic::
 --
@@ -122,7 +122,7 @@ Encoding::
 Description::
 Saturating adds of signed integers, vector-scalar
 
-=== vsadd.vi
+==== vsadd.vi
 
 Mnemonic::
 --
@@ -146,7 +146,7 @@ Encoding::
 Description::
 Saturating adds of signed integers, vector-immediate
 
-=== vssubu.vv
+==== vssubu.vv
 
 Mnemonic::
 --
@@ -170,7 +170,7 @@ Encoding::
 Description::
 Saturating subtract of unsigned integers, Vector-vector
 
-=== vssubu.vx
+==== vssubu.vx
 
 Mnemonic::
 --
@@ -194,7 +194,7 @@ Encoding::
 Description::
 Saturating subtract of unsigned integers, vector-scalar
 
-=== vssub.vv
+==== vssub.vv
 
 Mnemonic::
 --
@@ -218,7 +218,7 @@ Encoding::
 Description::
 Saturating subtract of signed integers, Vector-vector
 
-=== vssub.vx
+==== vssub.vx
 
 Mnemonic::
 --
@@ -243,9 +243,9 @@ Description::
 Saturating subtract of signed integers, vector-scalar
 
 
-== Vector Single-Width Averaging Add and Subtract
+=== Vector Single-Width Averaging Add and Subtract
 
-=== vaaddu.vv
+==== vaaddu.vv
 
 Mnemonic::
 --
@@ -269,7 +269,7 @@ Encoding::
 Description::
 Averaging adds of unsigned integers, roundoff_unsigned(vs2[i] + vs1[i], 1)
 
-=== vaaddu.vx
+==== vaaddu.vx
 
 Mnemonic::
 --
@@ -293,7 +293,7 @@ Encoding::
 Description::
 Averaging adds of unsigned integers, roundoff_unsigned(vs2[i] + x[rs1], 1)
 
-=== vaadd.vv
+==== vaadd.vv
 
 Mnemonic::
 --
@@ -317,7 +317,7 @@ Encoding::
 Description::
 Averaging adds of signed integers, roundoff_signed(vs2[i] + vs1[i], 1)
 
-=== vaadd.vx
+==== vaadd.vx
 
 Mnemonic::
 --
@@ -341,7 +341,7 @@ Encoding::
 Description::
 Averaging adds of signed integers, roundoff_signed(vs2[i] + x[rs1], 1)
 
-=== vasubu.vv
+==== vasubu.vv
 
 Encoding::
 [wavedrom, , svg]
@@ -360,7 +360,7 @@ Encoding::
 Description::
 Averaging subtract of unsigned integers, roundoff_unsigned(vs2[i] - vs1[i], 1)
 
-=== vasubu.vx
+==== vasubu.vx
 
 Mnemonic::
 --
@@ -384,7 +384,7 @@ Encoding::
 Description::
 Averaging subtract of unsigned integers, roundoff_unsigned(vs2[i] - x[rs1], 1)
 
-=== vasub.vv
+==== vasub.vv
 
 Mnemonic::
 --
@@ -408,7 +408,7 @@ Encoding::
 Description::
 Averaging subtract of signed integers, roundoff_signed(vs2[i] - vs1[i], 1)
 
-=== vasub.vx
+==== vasub.vx
 
 Mnemonic::
 --
@@ -433,9 +433,9 @@ Description::
 Averaging subtract of signed integers, roundoff_signed(vs2[i] - x[rs1], 1)
 
 
-== Vector Single-Width Fractional Multiply with Rounding and Saturation
+=== Vector Single-Width Fractional Multiply with Rounding and Saturation
 
-=== vsmul.vv
+==== vsmul.vv
 
 Mnemonic::
 --
@@ -460,7 +460,7 @@ Description::
 Signed saturating and rounding fractional multiply
 vd[i] = clip(roundoff_signed(vs2[i]*vs1[i], SEW-1))
 
-=== vsmul.vx
+==== vsmul.vx
 
 Mnemonic::
 --
@@ -486,9 +486,9 @@ Signed saturating and rounding fractional multiply
 vd[i] = clip(roundoff_signed(vs2[i]*x[rs1], SEW-1))
 
 
-== Vector Single-Width Scaling Shift Instructions
+=== Vector Single-Width Scaling Shift Instructions
 
-=== vssrl.vv
+==== vssrl.vv
 Mnemonic::
 --
     vssrl.vv vd, vs2, vs1, vm
@@ -512,7 +512,7 @@ Description::
 Scaling shift right logical.
 vd[i] = roundoff_unsigned(vs2[i], vs1[i])
 
-=== vssrl.vx
+==== vssrl.vx
 
 Mnemonic::
 --
@@ -538,7 +538,7 @@ Scaling shift right logical.
 
 vd[i] = roundoff_unsigned(vs2[i], x[rs1])
 
-=== vssrl.vi
+==== vssrl.vi
 Mnemonic::
 --
     vssrl.vi vd, vs2, uimm, vm
@@ -563,7 +563,7 @@ Scaling shift right logical.
 
 vd[i] = roundoff_unsigned(vs2[i], uimm)
 
-=== vssra.vv
+==== vssra.vv
 Mnemonic::
 --
     vssra.vv vd, vs2, vs1, vm
@@ -588,7 +588,7 @@ Scaling shift right arithmetic.
 
 vd[i] = roundoff_signed(vs2[i],vs1[i])
 
-=== vssra.vx
+==== vssra.vx
 Mnemonic::
 --
     vssra.vx vd, vs2, rs1, vm
@@ -613,7 +613,7 @@ Scaling shift right arithmetic.
 
 vd[i] = roundoff_signed(vs2[i], x[rs1])
 
-=== vssra.vi
+==== vssra.vi
 
 Mnemonic::
 --
@@ -639,9 +639,9 @@ Scaling shift right arithmetic.
 
 vd[i] = roundoff_signed(vs2[i], uimm)
 
-== Vector Narrowing Fixed-Point Clip Instructions
+=== Vector Narrowing Fixed-Point Clip Instructions
 
-=== vnclipu.wv
+==== vnclipu.wv
 Mnemonic::
 --
     vnclipu.wv vd, vs2, vs1, vm
@@ -666,7 +666,7 @@ Narrowing unsigned clip.
 
 vd[i] = clip(roundoff_unsigned(vs2[i], vs1[i]))
 
-=== vnclipu.wx
+==== vnclipu.wx
 Mnemonic::
 --
     vnclipu.wx vd, vs2, rs1, vm
@@ -691,7 +691,7 @@ Narrowing unsigned clip.
 
 vd[i] = clip(roundoff_unsigned(vs2[i], x[rs1]))
 
-=== vnclipu.wi
+==== vnclipu.wi
 Mnemonic::
 --
     vnclipu.wi vd, vs2, uimm, vm
@@ -716,7 +716,7 @@ Narrowing unsigned clip.
 
 vd[i] = clip(roundoff_unsigned(vs2[i], uimm))
 
-=== vnclip.wv
+==== vnclip.wv
 Mnemonic::
 --
     vnclip.wv vd, vs2, vs1, vm
@@ -741,7 +741,7 @@ Narrowing signed clip.
 
 vd[i] = clip(roundoff_signed(vs2[i], vs1[i]))
 
-=== vnclip.wx
+==== vnclip.wx
 Mnemonic::
 --
     vnclip.wx vd, vs2, rs1, vm
@@ -766,7 +766,7 @@ Narrowing signed clip.
 
 vd[i] = clip(roundoff_signed(vs2[i], x[rs1]))
 
-=== vnclip.wi
+==== vnclip.wi
 Mnemonic::
 --
     vnclip.wi vd, vs2, uimm, vm

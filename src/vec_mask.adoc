@@ -1,8 +1,8 @@
-= Vector Mask Instructions
+== Vector Mask Instructions
 
-== Vector Mask-Register Logical Instructions
+=== Vector Mask-Register Logical Instructions
 
-=== vmand.mm
+==== vmand.mm
 
 Mnemonic::
 --
@@ -44,7 +44,7 @@ vbool64_t __riscv_vmand_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
 
-=== vmnand.mm
+==== vmnand.mm
 
 Mnemonic::
 --
@@ -85,7 +85,7 @@ vbool32_t __riscv_vmnand_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmnand_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-=== vmandn.mm
+==== vmandn.mm
 
 Mnemonic::
 --
@@ -126,7 +126,7 @@ vbool32_t __riscv_vmandn_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmandn_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-=== vmxor.mm
+==== vmxor.mm
 
 Mnemonic::
 --
@@ -167,7 +167,7 @@ vbool32_t __riscv_vmxor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmxor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-=== vmor.mm
+==== vmor.mm
 
 Mnemonic::
 --
@@ -208,7 +208,7 @@ vbool32_t __riscv_vmor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-=== vmnor.mm
+==== vmnor.mm
 
 Mnemonic::
 --
@@ -249,7 +249,7 @@ vbool32_t __riscv_vmnor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmnor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-=== vmorn.mm
+==== vmorn.mm
 
 Mnemonic::
 --
@@ -290,7 +290,7 @@ vbool32_t __riscv_vmorn_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmorn_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-=== vmxnor.mm
+==== vmxnor.mm
 
 Mnemonic::
 --
@@ -331,7 +331,7 @@ vbool32_t __riscv_vmxnor_mm_b32 (vbool32_t op1, vbool32_t op2, size_t vl);
 vbool64_t __riscv_vmxnor_mm_b64 (vbool64_t op1, vbool64_t op2, size_t vl);
 --
 
-== vcpop.m
+=== vcpop.m
 
 Mnemonic::
 --
@@ -377,7 +377,7 @@ unsigned long __riscv_vcpop_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
 unsigned long __riscv_vcpop_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
 --
 
-== vfirst.m
+=== vfirst.m
 
 Mnemonic::
 --
@@ -423,7 +423,7 @@ long __riscv_vfirst_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
 long __riscv_vfirst_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
 --
 
-== vmsbf.m
+=== vmsbf.m
 
 Mnemonic::
 --
@@ -469,7 +469,7 @@ vbool32_t __riscv_vmsbf_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
 vbool64_t __riscv_vmsbf_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
 --
 
-== vmsif.m
+=== vmsif.m
 
 Mnemonic::
 --
@@ -515,7 +515,7 @@ vbool32_t __riscv_vmsif_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
 vbool64_t __riscv_vmsif_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
 --
 
-== vmsof.m
+=== vmsof.m
 
 Mnemonic::
 --
@@ -561,7 +561,7 @@ vbool32_t __riscv_vmsof_m_b32_m (vbool32_t mask, vbool32_t op1, size_t vl);
 vbool64_t __riscv_vmsof_m_b64_m (vbool64_t mask, vbool64_t op1, size_t vl);
 --
 
-== viota.m
+=== viota.m
 
 Mnemonic::
 --
@@ -637,7 +637,7 @@ vuint64m4_t __riscv_viota_m_u64m4_m (vbool16_t mask, vbool16_t op1, size_t vl);
 vuint64m8_t __riscv_viota_m_u64m8_m (vbool8_t mask, vbool8_t op1, size_t vl);
 --
 
-== vid.v
+=== vid.v
 
 Mnemonic::
 --

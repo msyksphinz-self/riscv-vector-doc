@@ -4,7 +4,8 @@
 :company: RISC-V
 // Pull in variable with revision info
 :url-riscv: http://riscv.org
-:doctype: book
+:doctype: manpage
+//:doctype: book
 //:doctype: report
 
 :imagesdir: images

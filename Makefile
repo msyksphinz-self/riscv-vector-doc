@@ -7,14 +7,10 @@ all: $(DOC)
 $(PROJECT).html: $(SOURCE)
 	cd src/ && \
 	asciidoctor \
-		-a stylesdir="$(PWD)/src/readthedocs/" \
-		-a sytlesheet=readthedocs.css \
+		-a stylesheet=readthedocs.css \
 		-r asciidoctor-diagram \
-		riscv-vector-doc.adoc
-# -o $(PROJECT).html
-
-# 	pandoc -s -f docbook $(PROJECT).docbook -o $(PROJECT).rst
-# 	sphinx-build -b html . build
+		riscv-vector-doc.adoc \
+		-o ../riscv-vector-doc.html
 
 $(PROJECT).pdf: $(SOURCE)
 	asciidoctor-pdf -r asciidoctor-diagram -a compress src/riscv-vector-doc.adoc -o $@

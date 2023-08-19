@@ -1,6 +1,6 @@
-= Vector Bitwise Logical Instructions
+== Vector Bitwise Logical Instructions
 
-== vand.vv
+=== vand.vv
 
 Mnemonic::
 --
@@ -25,7 +25,7 @@ Encoding::
 Description::
 Bitwise logical operations, Vector-vector
 
-== vand.vx
+=== vand.vx
 
 Mnemonic::
 --
@@ -49,7 +49,7 @@ Encoding::
 Description::
 Bitwise logical operations, vector-scalar
 
-== vand.vi
+=== vand.vi
 
 Mnemonic::
 --
@@ -73,7 +73,7 @@ Encoding::
 Description::
 Bitwise logical operations, vector-immediate
 
-== vor.vv
+=== vor.vv
 
 Mnemonic::
 --
@@ -98,7 +98,7 @@ Encoding::
 Description::
 Bitwise logical operations, Vector-vector
 
-== vor.vx
+=== vor.vx
 
 Mnemonic::
 --
@@ -122,7 +122,7 @@ Encoding::
 Description::
 Bitwise logical operations, vector-scalar
 
-== vor.vi
+=== vor.vi
 
 Mnemonic::
 --
@@ -147,7 +147,7 @@ Encoding::
 Description::
 Bitwise logical operations, vector-immediate
 
-== vxor.vv
+=== vxor.vv
 
 Mnemonic::
 --
@@ -172,7 +172,7 @@ Encoding::
 Description::
 Bitwise logical operations, Vector-vector
 
-== vxor.vx
+=== vxor.vx
 
 Mnemonic::
 --
@@ -196,7 +196,7 @@ Encoding::
 Description::
 Bitwise logical operations, vector-scalar
 
-== vxor.vi
+=== vxor.vi
 
 Mnemonic::
 --
@@ -221,9 +221,9 @@ Description::
 Bitwise logical operations, vector-immediate
 
 
-== Vector Single-Width Shift Instructions
+=== Vector Single-Width Shift Instructions
 
-== vsll.vv
+=== vsll.vv
 Mnemonic::
 --
     vsll.vv vd, vs2, vs1, vm
@@ -246,7 +246,7 @@ Encoding::
 Description::
 Bit shift operations, Vector-vector
 
-== vsll.vx
+=== vsll.vx
 Mnemonic::
 --
     vsll.vx vd, vs2, rs1, vm
@@ -269,7 +269,7 @@ Encoding::
 Description::
 Bit shift operations, vector-scalar
 
-== vsll.vi
+=== vsll.vi
 Mnemonic::
 --
     vsll.vi vd, vs2, uimm, vm
@@ -293,7 +293,7 @@ Encoding::
 Description::
 Bit shift operations, vector-immediate
 
-== vsrl.vv
+=== vsrl.vv
 Mnemonic::
 --
     vsrl.vv vd, vs2, vs1, vm
@@ -316,7 +316,7 @@ Encoding::
 Description::
 Bit shift operations, Vector-vector
 
-== vsrl.vx
+=== vsrl.vx
 Mnemonic::
 --
     vsrl.vx vd, vs2, rs1, vm
@@ -339,7 +339,7 @@ Encoding::
 Description::
 Bit shift operations, vector-scalar
 
-== vsrl.vi
+=== vsrl.vi
 Mnemonic::
 --
     vsrl.vi vd, vs2, uimm, vm
@@ -362,7 +362,7 @@ Encoding::
 Description::
 Bit shift operations, vector-immediate
 
-== vsra.vv
+=== vsra.vv
 Mnemonic::
 --
     vsra.vv vd, vs2, vs1, vm
@@ -385,7 +385,7 @@ Encoding::
 Description::
 Bit shift operations, Vector-vector
 
-== vsra.vx
+=== vsra.vx
 Mnemonic::
 --
     vsra.vx vd, vs2, rs1, vm
@@ -409,7 +409,7 @@ Encoding::
 Description::
 Bit shift operations, vector-scalar
 
-== vsra.vi
+=== vsra.vi
 Mnemonic::
 --
     vsra.vi vd, vs2, uimm, vm
@@ -433,9 +433,9 @@ Description::
 Bit shift operations, vector-immediate
 
 
-== Vector Narrowing Integer Right Shift Instructions
+=== Vector Narrowing Integer Right Shift Instructions
 
-== vnsrl.wv
+=== vnsrl.wv
 
 Mnemonic::
 --
@@ -459,7 +459,7 @@ Encoding::
 Description::
 Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-vector
 
-== vnsrl.wx
+=== vnsrl.wx
 
 Mnemonic::
 --
@@ -483,7 +483,7 @@ Encoding::
 Description::
 Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-scalar
 
-== vnsrl.wi
+=== vnsrl.wi
 
 Mnemonic::
 --
@@ -507,7 +507,7 @@ Encoding::
 Description::
 Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-immediate
 
-== vnsra.wv
+=== vnsra.wv
 
 Mnemonic::
 --
@@ -532,7 +532,7 @@ Encoding::
 Description::
 Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-vector
 
-== vnsra.wx
+=== vnsra.wx
 
 Mnemonic::
 --
@@ -556,7 +556,7 @@ Encoding::
 Description::
 Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-scalar
 
-== vnsra.wi
+=== vnsra.wi
 
 Mnemonic::
 --
@@ -582,9 +582,9 @@ Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-immediate
 
 
 
-== Vector Integer Compare Instructions
+=== Vector Integer Compare Instructions
 
-== vmseq.vv
+=== vmseq.vv
 
 Mnemonic::
 --
@@ -608,7 +608,7 @@ Encoding::
 Description::
 Set if equal, Vector-vector
 
-== vmseq.vx
+=== vmseq.vx
 
 Mnemonic::
 --
@@ -632,7 +632,7 @@ Encoding::
 Description::
 Set if equal, vector-scalar
 
-== vmseq.vi
+=== vmseq.vi
 
 Mnemonic::
 --
@@ -656,7 +656,7 @@ Encoding::
 Description::
 Set if equal, vector-immediate
 
-== vmsne.vv
+=== vmsne.vv
 
 Mnemonic::
 --
@@ -680,7 +680,7 @@ Encoding::
 Description::
 Set if not equal, Vector-vector
 
-== vmsne.vx
+=== vmsne.vx
 
 Mnemonic::
 --
@@ -705,7 +705,7 @@ Encoding::
 Description::
 Set if not equal, vector-scalar
 
-== vmsne.vi
+=== vmsne.vi
 
 Mnemonic::
 --
@@ -729,7 +729,7 @@ Encoding::
 Description::
 Set if not equal, vector-immediate
 
-== vmsltu.vv
+=== vmsltu.vv
 
 Mnemonic::
 --
@@ -753,7 +753,7 @@ Encoding::
 Description::
 Set if less than, unsigned, Vector-vector
 
-== vmsltu.vx
+=== vmsltu.vx
 
 Mnemonic::
 --
@@ -777,7 +777,7 @@ Encoding::
 Description::
 Set if less than, unsigned, Vector-scalar
 
-== vmslt.vv
+=== vmslt.vv
 
 Mnemonic::
 --
@@ -801,7 +801,7 @@ Encoding::
 Description::
 Set if less than, signed, Vector-vector
 
-== vmslt.vx
+=== vmslt.vx
 
 Mnemonic::
 --
@@ -825,7 +825,7 @@ Encoding::
 Description::
 Set if less than, signed, vector-scalar
 
-== vmsleu.vv
+=== vmsleu.vv
 
 Mnemonic::
 --
@@ -849,7 +849,7 @@ Encoding::
 Description::
 Set if less than or equal, unsigned, Vector-vector
 
-== vmsleu.vx
+=== vmsleu.vx
 
 Mnemonic::
 --
@@ -873,7 +873,7 @@ Encoding::
 Description::
 Set if less than or equal, unsigned, vector-scalar
 
-== vmsleu.vi
+=== vmsleu.vi
 
 Mnemonic::
 --
@@ -897,7 +897,7 @@ Encoding::
 Description::
 Set if less than or equal, unsigned, Vector-immediate
 
-== vmsle.vv
+=== vmsle.vv
 
 Mnemonic::
 --
@@ -921,7 +921,7 @@ Encoding::
 Description::
 Set if less than or equal, signed, Vector-vector
 
-== vmsle.vx
+=== vmsle.vx
 
 Mnemonic::
 --
@@ -945,7 +945,7 @@ Encoding::
 Description::
 Set if less than or equal, signed, vector-scalar
 
-== vmsle.vi
+=== vmsle.vi
 
 Mnemonic::
 --
@@ -969,7 +969,7 @@ Encoding::
 Description::
 Set if less than or equal, signed, vector-immediate
 
-== vmsgtu.vx
+=== vmsgtu.vx
 
 Mnemonic::
 --
@@ -993,7 +993,7 @@ Encoding::
 Description::
 Set if greater than, unsigned, Vector-scalar
 
-== vmsgtu.vi
+=== vmsgtu.vi
 
 Mnemonic::
 --
@@ -1017,7 +1017,7 @@ Encoding::
 Description::
 Set if greater than, unsigned, Vector-immediate
 
-== vmsgt.vx
+=== vmsgt.vx
 
 Mnemonic::
 --
@@ -1041,7 +1041,7 @@ Encoding::
 Description::
 Set if greater than, signed, Vector-scalar
 
-== vmsgt.vi
+=== vmsgt.vi
 
 Mnemonic::
 --
@@ -1067,12 +1067,12 @@ Set if greater than, signed, Vector-immediate
 
 
 
-== Vector Integer Min/Max Instructions
+=== Vector Integer Min/Max Instructions
 
 Signed and unsigned integer minimum and maximum instructions are
 supported.
 
-== vminu.vv
+=== vminu.vv
 
 Mnemonic::
 --
@@ -1096,7 +1096,7 @@ Encoding::
 Description::
  Unsigned minimum, Vector-vector
 
-== vminu.vx
+=== vminu.vx
 
 Mnemonic::
 --
@@ -1120,7 +1120,7 @@ Encoding::
 Description::
  Unsigned minimum, vector-scalar
 
-== vmin.vv
+=== vmin.vv
 
 Mnemonic::
 --
@@ -1144,7 +1144,7 @@ Encoding::
 Description::
 Signed minimum, Vector-vector
 
-== vmin.vx
+=== vmin.vx
 
 Mnemonic::
 --
@@ -1168,7 +1168,7 @@ Encoding::
 Description::
 Signed minimum, vector-scalar
 
-== vmaxu.vv
+=== vmaxu.vv
 
 Mnemonic::
 --
@@ -1192,7 +1192,7 @@ Encoding::
 Description::
  Unsigned maximum, Vector-vector
 
-== vmaxu.vx
+=== vmaxu.vx
 
 Mnemonic::
 --
@@ -1216,7 +1216,7 @@ Encoding::
 Description::
  Unsigned maximum, vector-scalar
 
-== vmax.vv
+=== vmax.vv
 
 Mnemonic::
 --
@@ -1240,7 +1240,7 @@ Encoding::
 Description::
 Signed maximum, Vector-vector
 
-== vmax.vx
+=== vmax.vx
 
 Mnemonic::
 --
