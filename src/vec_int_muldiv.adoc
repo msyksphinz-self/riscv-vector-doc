@@ -24,6 +24,20 @@ Encoding::
 Description::
 Signed multiply, returning low bits of product, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmul_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmul_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmul.vx
 
 Mnemonic::
@@ -47,6 +61,20 @@ Encoding::
 
 Description::
 Signed multiply, returning low bits of product, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmul_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmul_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmulh.vv
 
@@ -72,6 +100,20 @@ Encoding::
 Description::
 Signed multiply, returning high bits of product, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmulh_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmulh_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmulh.vx
 
 Mnemonic::
@@ -95,6 +137,20 @@ Encoding::
 
 Description::
 Signed multiply, returning high bits of product, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmulh_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmulh_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmulhu.vv
 
@@ -120,6 +176,20 @@ Encoding::
 Description::
 Unsigned multiply, returning high bits of product, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmulhu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmulhu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmulhu.vx
 
 Mnemonic::
@@ -144,6 +214,20 @@ Encoding::
 Description::
 Unsigned multiply, returning high bits of product, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmulhu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmulhu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vmulhsu.vv
 
 Mnemonic::
@@ -167,6 +251,20 @@ Encoding::
 
 Description::
 Signed(vs2)-Unsigned multiply, returning high bits of product, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmulhsu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmulhsu_vv_intrinsic.cpp[]
+----
+====
+
 
 === vmulhsu.vx
 
@@ -195,6 +293,20 @@ Signed(vs2)-Unsigned multiply, returning high bits of product, vector-scalar
 
 == Vector Integer Divide Instructions
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmulhsu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmulhsu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vdivu.vv
 
 Mnemonic::
@@ -218,6 +330,20 @@ Encoding::
 
 Description::
 Unsigned divide, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vdivu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vdivu_vv_intrinsic.cpp[]
+----
+====
+
 
 === vdivu.vx
 
@@ -243,6 +369,20 @@ Encoding::
 Description::
 Unsigned divide, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vdivu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vdivu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vdiv.vv
 
 Mnemonic::
@@ -266,6 +406,20 @@ Encoding::
 
 Description::
 Signed divide, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vdiv_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vdiv_vv_intrinsic.cpp[]
+----
+====
+
 
 === vdiv.vx
 
@@ -291,6 +445,20 @@ Encoding::
 Description::
 Signed divide, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vdiv_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vdiv_vx_intrinsic.cpp[]
+----
+====
+
+
 === vremu.vv
 
 Mnemonic::
@@ -314,6 +482,20 @@ Encoding::
 
 Description::
 Unsigned remainder, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vremu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vremu_vv_intrinsic.cpp[]
+----
+====
+
 
 === vremu.vx
 
@@ -339,6 +521,20 @@ Encoding::
 Description::
 Unsigned remainder, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vremu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vremu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vrem.vv
 
 Mnemonic::
@@ -362,6 +558,20 @@ Encoding::
 
 Description::
 Signed remainder, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vrem_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vrem_vv_intrinsic.cpp[]
+----
+====
+
 
 === vrem.vx
 
@@ -390,6 +600,20 @@ Signed remainder, vector-scalar
 
 == Vector Widening Integer Multiply Instructions
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vrem_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vrem_vx_intrinsic.cpp[]
+----
+====
+
+
 === vwmul.vv
 
 Mnemonic::
@@ -413,6 +637,20 @@ Encoding::
 
 Description::
 Widening signed-integer multiply, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmul_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmul_vv_intrinsic.cpp[]
+----
+====
+
 
 === vwmul.vx
 
@@ -438,6 +676,20 @@ Encoding::
 Description::
 Widening signed-integer multiply, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmul_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmul_vx_intrinsic.cpp[]
+----
+====
+
+
 === vwmulu.vv
 
 Mnemonic::
@@ -461,6 +713,20 @@ Encoding::
 
 Description::
 Widening unsigned-integer multiply, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmulu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmulu_vv_intrinsic.cpp[]
+----
+====
+
 
 === vwmulu.vx
 
@@ -486,6 +752,20 @@ Encoding::
 Description::
 Widening unsigned-integer multiply, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmulu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmulu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vwmulsu.vv
 
 Mnemonic::
@@ -509,6 +789,20 @@ Encoding::
 
 Description::
 Widening signed(vs2)-unsigned integer multiply, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmulsu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmulsu_vv_intrinsic.cpp[]
+----
+====
+
 
 === vwmulsu.vx
 
@@ -536,6 +830,20 @@ Widening signed(vs2)-unsigned integer multiply, vector-scalar
 
 == Vector Single-Width Integer Multiply-Add Instructions
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmulsu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmulsu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vmacc.vv
 
 Mnemonic::
@@ -560,6 +868,20 @@ Encoding::
 Description::
 Integer multiply-add, overwrite addend.
 vd[i] = +(vs1[i] * vs2[i]) + vd[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmacc_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmacc_vv_intrinsic.cpp[]
+----
+====
+
 
 === vmacc.vx
 
@@ -586,6 +908,20 @@ Description::
 Integer multiply-add, overwrite addend.
 vd[i] = +(x[rs1] * vs2[i]) + vd[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmacc_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmacc_vx_intrinsic.cpp[]
+----
+====
+
+
 === vnmsac.vv
 
 Mnemonic::
@@ -610,6 +946,20 @@ Encoding::
 Description::
 Integer multiply-sub, overwrite minuend.
 vd[i] = -(vs1[i] * vs2[i]) + vd[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnmsac_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnmsac_vv_intrinsic.cpp[]
+----
+====
+
 
 === vnmsac.vx
 
@@ -636,6 +986,20 @@ Description::
 Integer multiply-sub, overwrite minuend.
 vd[i] = -(x[rs1] * vs2[i]) + vd[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnmsac_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnmsac_vx_intrinsic.cpp[]
+----
+====
+
+
 === vmadd.vv
 
 Mnemonic::
@@ -660,6 +1024,20 @@ Encoding::
 Description::
 Integer multiply-add, overwrite multiplicand.
 vd[i] = (vs1[i] * vd[i]) + vs2[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadd_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadd_vv_intrinsic.cpp[]
+----
+====
+
 
 === vmadd.vx
 
@@ -686,6 +1064,20 @@ Description::
 Integer multiply-add, overwrite multiplicand.
 vd[i] = (x[rs1] * vd[i]) + vs2[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadd_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadd_vx_intrinsic.cpp[]
+----
+====
+
+
 === vnmsub.vv
 
 Mnemonic::
@@ -710,6 +1102,20 @@ Encoding::
 Description::
 Integer multiply-sub, overwrite multiplicand.
 vd[i] = -(vs1[i] * vd[i]) + vs2[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnmsub_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnmsub_vv_intrinsic.cpp[]
+----
+====
+
 
 === vnmsub.vx
 
@@ -739,6 +1145,20 @@ vd[i] = -(x[rs1] * vd[i]) + vs2[i]
 
 == Vector Widening Integer Multiply-Add Instructions
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnmsub_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnmsub_vx_intrinsic.cpp[]
+----
+====
+
+
 === vwmaccu.vv
 
 Mnemonic::
@@ -764,6 +1184,20 @@ Description::
 Widening unsigned-integer multiply-add, overwrite addend.
 vd[i] = +(vs1[i] * vs2[i]) + vd[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmaccu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmaccu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vwmaccu.vx
 
 Mnemonic::
@@ -788,6 +1222,20 @@ Encoding::
 Description::
 Widening unsigned-integer multiply-add, overwrite addend.
 vd[i] = +(x[rs1] * vs2[i]) + vd[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmaccu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmaccu_vx_intrinsic.cpp[]
+----
+====
+
 
 === vwmacc.vv
 
@@ -815,6 +1263,20 @@ Description::
 Widening signed-integer multiply-add, overwrite addend.
 vd[i] = +(vs1[i] * vs2[i]) + vd[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmacc_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmacc_vv_intrinsic.cpp[]
+----
+====
+
+
 === vwmacc.vx
 
 Mnemonic::
@@ -839,6 +1301,20 @@ Encoding::
 Description::
 Widening signed-integer multiply-add, overwrite addend.
 vd[i] = +(x[rs1] * vs2[i]) + vd[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmacc_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmacc_vx_intrinsic.cpp[]
+----
+====
+
 
 === vwmaccsu.vv
 
@@ -865,6 +1341,20 @@ Description::
 Widening signed-unsigned-integer multiply-add, overwrite addend.
 vd[i] = +(signed(vs1[i]) * unsigned(vs2[i])) + vd[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmaccsu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmaccsu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vwmaccsu.vx
 
 Mnemonic::
@@ -890,6 +1380,20 @@ Description::
 Widening signed-unsigned-integer multiply-add, overwrite addend.
 vd[i] = +(signed(x[rs1]) * unsigned(vs2[i])) + vd[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmaccsu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmaccsu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vwmaccus.vx
 
 Mnemonic::
@@ -914,3 +1418,17 @@ Encoding::
 Description::
 Widening unsigned-signed-integer multiply-add, overwrite addend.
 vd[i] = +(unsigned(x[rs1]) * signed(vs2[i])) + vd[i]
+
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwmaccus_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwmaccus_vx_intrinsic.cpp[]
+----
+====

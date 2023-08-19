@@ -25,6 +25,20 @@ Encoding::
 Description::
 Bitwise logical operations, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vand_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vand_vv_intrinsic.cpp[]
+----
+====
+
+
 === vand.vx
 
 Mnemonic::
@@ -49,6 +63,20 @@ Encoding::
 Description::
 Bitwise logical operations, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vand_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vand_vx_intrinsic.cpp[]
+----
+====
+
+
 === vand.vi
 
 Mnemonic::
@@ -72,6 +100,20 @@ Encoding::
 
 Description::
 Bitwise logical operations, vector-immediate
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vand_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vand_vi_intrinsic.cpp[]
+----
+====
+
 
 === vor.vv
 
@@ -98,6 +140,20 @@ Encoding::
 Description::
 Bitwise logical operations, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vor_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vor_vv_intrinsic.cpp[]
+----
+====
+
+
 === vor.vx
 
 Mnemonic::
@@ -121,6 +177,20 @@ Encoding::
 
 Description::
 Bitwise logical operations, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vor_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vor_vx_intrinsic.cpp[]
+----
+====
+
 
 === vor.vi
 
@@ -147,6 +217,20 @@ Encoding::
 Description::
 Bitwise logical operations, vector-immediate
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vor_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vor_vi_intrinsic.cpp[]
+----
+====
+
+
 === vxor.vv
 
 Mnemonic::
@@ -172,6 +256,20 @@ Encoding::
 Description::
 Bitwise logical operations, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vxor_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vxor_vv_intrinsic.cpp[]
+----
+====
+
+
 === vxor.vx
 
 Mnemonic::
@@ -195,6 +293,20 @@ Encoding::
 
 Description::
 Bitwise logical operations, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vxor_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vxor_vx_intrinsic.cpp[]
+----
+====
+
 
 === vxor.vi
 
@@ -221,7 +333,35 @@ Description::
 Bitwise logical operations, vector-immediate
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vxor_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vxor_vi_intrinsic.cpp[]
+----
+====
+
+
 === Vector Single-Width Shift Instructions
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/Vector.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
 
 === vsll.vv
 Mnemonic::
@@ -246,6 +386,20 @@ Encoding::
 Description::
 Bit shift operations, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsll_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsll_vv_intrinsic.cpp[]
+----
+====
+
+
 === vsll.vx
 Mnemonic::
 --
@@ -268,6 +422,20 @@ Encoding::
 
 Description::
 Bit shift operations, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsll_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsll_vx_intrinsic.cpp[]
+----
+====
+
 
 === vsll.vi
 Mnemonic::
@@ -293,6 +461,20 @@ Encoding::
 Description::
 Bit shift operations, vector-immediate
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsll_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsll_vi_intrinsic.cpp[]
+----
+====
+
+
 === vsrl.vv
 Mnemonic::
 --
@@ -315,6 +497,20 @@ Encoding::
 
 Description::
 Bit shift operations, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsrl_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsrl_vv_intrinsic.cpp[]
+----
+====
+
 
 === vsrl.vx
 Mnemonic::
@@ -339,6 +535,20 @@ Encoding::
 Description::
 Bit shift operations, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsrl_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsrl_vx_intrinsic.cpp[]
+----
+====
+
+
 === vsrl.vi
 Mnemonic::
 --
@@ -362,6 +572,20 @@ Encoding::
 Description::
 Bit shift operations, vector-immediate
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsrl_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsrl_vi_intrinsic.cpp[]
+----
+====
+
+
 === vsra.vv
 Mnemonic::
 --
@@ -384,6 +608,20 @@ Encoding::
 
 Description::
 Bit shift operations, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsra_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsra_vv_intrinsic.cpp[]
+----
+====
+
 
 === vsra.vx
 Mnemonic::
@@ -409,6 +647,20 @@ Encoding::
 Description::
 Bit shift operations, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsra_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsra_vx_intrinsic.cpp[]
+----
+====
+
+
 === vsra.vi
 Mnemonic::
 --
@@ -433,7 +685,35 @@ Description::
 Bit shift operations, vector-immediate
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsra_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsra_vi_intrinsic.cpp[]
+----
+====
+
+
 === Vector Narrowing Integer Right Shift Instructions
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/Vector.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
 
 === vnsrl.wv
 
@@ -459,6 +739,20 @@ Encoding::
 Description::
 Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnsrl_wv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnsrl_wv_intrinsic.cpp[]
+----
+====
+
+
 === vnsrl.wx
 
 Mnemonic::
@@ -483,6 +777,20 @@ Encoding::
 Description::
 Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnsrl_wx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnsrl_wx_intrinsic.cpp[]
+----
+====
+
+
 === vnsrl.wi
 
 Mnemonic::
@@ -506,6 +814,20 @@ Encoding::
 
 Description::
 Narrowing shift right logical, SEW = (2*SEW) >> SEW, vector-immediate
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnsrl_wi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnsrl_wi_intrinsic.cpp[]
+----
+====
+
 
 === vnsra.wv
 
@@ -532,6 +854,20 @@ Encoding::
 Description::
 Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnsra_wv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnsra_wv_intrinsic.cpp[]
+----
+====
+
+
 === vnsra.wx
 
 Mnemonic::
@@ -555,6 +891,20 @@ Encoding::
 
 Description::
 Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnsra_wx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnsra_wx_intrinsic.cpp[]
+----
+====
+
 
 === vnsra.wi
 
@@ -582,7 +932,35 @@ Narrowing shift right arithmetic, SEW = (2*SEW) >> SEW, vector-immediate
 
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vnsra_wi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vnsra_wi_intrinsic.cpp[]
+----
+====
+
+
 === Vector Integer Compare Instructions
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/Vector.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
 
 === vmseq.vv
 
@@ -608,6 +986,20 @@ Encoding::
 Description::
 Set if equal, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmseq_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmseq_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmseq.vx
 
 Mnemonic::
@@ -631,6 +1023,20 @@ Encoding::
 
 Description::
 Set if equal, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmseq_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmseq_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmseq.vi
 
@@ -656,6 +1062,20 @@ Encoding::
 Description::
 Set if equal, vector-immediate
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmseq_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmseq_vi_intrinsic.cpp[]
+----
+====
+
+
 === vmsne.vv
 
 Mnemonic::
@@ -679,6 +1099,20 @@ Encoding::
 
 Description::
 Set if not equal, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsne_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsne_vv_intrinsic.cpp[]
+----
+====
+
 
 === vmsne.vx
 
@@ -705,6 +1139,20 @@ Encoding::
 Description::
 Set if not equal, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsne_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsne_vx_intrinsic.cpp[]
+----
+====
+
+
 === vmsne.vi
 
 Mnemonic::
@@ -728,6 +1176,20 @@ Encoding::
 
 Description::
 Set if not equal, vector-immediate
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsne_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsne_vi_intrinsic.cpp[]
+----
+====
+
 
 === vmsltu.vv
 
@@ -753,6 +1215,20 @@ Encoding::
 Description::
 Set if less than, unsigned, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsltu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsltu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmsltu.vx
 
 Mnemonic::
@@ -776,6 +1252,20 @@ Encoding::
 
 Description::
 Set if less than, unsigned, Vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsltu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsltu_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmslt.vv
 
@@ -801,6 +1291,20 @@ Encoding::
 Description::
 Set if less than, signed, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmslt_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmslt_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmslt.vx
 
 Mnemonic::
@@ -824,6 +1328,20 @@ Encoding::
 
 Description::
 Set if less than, signed, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmslt_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmslt_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmsleu.vv
 
@@ -849,6 +1367,20 @@ Encoding::
 Description::
 Set if less than or equal, unsigned, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsleu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsleu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmsleu.vx
 
 Mnemonic::
@@ -872,6 +1404,20 @@ Encoding::
 
 Description::
 Set if less than or equal, unsigned, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsleu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsleu_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmsleu.vi
 
@@ -897,6 +1443,20 @@ Encoding::
 Description::
 Set if less than or equal, unsigned, Vector-immediate
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsleu_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsleu_vi_intrinsic.cpp[]
+----
+====
+
+
 === vmsle.vv
 
 Mnemonic::
@@ -920,6 +1480,20 @@ Encoding::
 
 Description::
 Set if less than or equal, signed, Vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsle_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsle_vv_intrinsic.cpp[]
+----
+====
+
 
 === vmsle.vx
 
@@ -945,6 +1519,20 @@ Encoding::
 Description::
 Set if less than or equal, signed, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsle_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsle_vx_intrinsic.cpp[]
+----
+====
+
+
 === vmsle.vi
 
 Mnemonic::
@@ -968,6 +1556,20 @@ Encoding::
 
 Description::
 Set if less than or equal, signed, vector-immediate
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsle_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsle_vi_intrinsic.cpp[]
+----
+====
+
 
 === vmsgtu.vx
 
@@ -993,6 +1595,20 @@ Encoding::
 Description::
 Set if greater than, unsigned, Vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsgtu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsgtu_vx_intrinsic.cpp[]
+----
+====
+
+
 === vmsgtu.vi
 
 Mnemonic::
@@ -1017,6 +1633,20 @@ Encoding::
 Description::
 Set if greater than, unsigned, Vector-immediate
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsgtu_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsgtu_vi_intrinsic.cpp[]
+----
+====
+
+
 === vmsgt.vx
 
 Mnemonic::
@@ -1040,6 +1670,20 @@ Encoding::
 
 Description::
 Set if greater than, signed, Vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsgt_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsgt_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmsgt.vi
 
@@ -1067,10 +1711,38 @@ Set if greater than, signed, Vector-immediate
 
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsgt_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsgt_vi_intrinsic.cpp[]
+----
+====
+
+
 === Vector Integer Min/Max Instructions
 
 Signed and unsigned integer minimum and maximum instructions are
 supported.
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/Vector.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
 
 === vminu.vv
 
@@ -1096,6 +1768,20 @@ Encoding::
 Description::
  Unsigned minimum, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vminu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vminu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vminu.vx
 
 Mnemonic::
@@ -1119,6 +1805,20 @@ Encoding::
 
 Description::
  Unsigned minimum, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vminu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vminu_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmin.vv
 
@@ -1144,6 +1844,20 @@ Encoding::
 Description::
 Signed minimum, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmin_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmin_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmin.vx
 
 Mnemonic::
@@ -1167,6 +1881,20 @@ Encoding::
 
 Description::
 Signed minimum, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmin_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmin_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmaxu.vv
 
@@ -1192,6 +1920,20 @@ Encoding::
 Description::
  Unsigned maximum, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmaxu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmaxu_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmaxu.vx
 
 Mnemonic::
@@ -1215,6 +1957,20 @@ Encoding::
 
 Description::
  Unsigned maximum, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmaxu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmaxu_vx_intrinsic.cpp[]
+----
+====
+
 
 === vmax.vv
 
@@ -1240,6 +1996,20 @@ Encoding::
 Description::
 Signed maximum, Vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmax_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmax_vv_intrinsic.cpp[]
+----
+====
+
+
 === vmax.vx
 
 Mnemonic::
@@ -1263,3 +2033,16 @@ Encoding::
 
 Description::
 Signed maximum, vector-scalar
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmax_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmax_vx_intrinsic.cpp[]
+----
+====

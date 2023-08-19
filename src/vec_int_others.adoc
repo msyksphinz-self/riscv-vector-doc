@@ -23,6 +23,20 @@ Encoding::
 Description::
 vd[i] = v0.mask[i] ? vs1[i] : vs2[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmerge_vvm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmerge_vvm_intrinsic.cpp[]
+----
+====
+
+
 === vmerge.vxm
 Mnemonic::
 --
@@ -45,6 +59,20 @@ Encoding::
 
 Description::
 vd[i] = v0.mask[i] ? x[rs1] : vs2[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmerge_vxm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmerge_vxm_intrinsic.cpp[]
+----
+====
+
 
 === vmerge.vim
 Mnemonic::
@@ -71,6 +99,20 @@ vd[i] = v0.mask[i] ? imm    : vs2[i]
 
 == Vector Integer Move Instructions
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmerge_vim.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmerge_vim_intrinsic.cpp[]
+----
+====
+
+
 === vmv.v.v
 
 Mnemonic::
@@ -94,6 +136,20 @@ Encoding::
 
 Description::
 vd[i] = vs1[i]
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmv_v_v.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmv_v_v_intrinsic.cpp[]
+----
+====
+
+
 === vmv.v.x
 
 Mnemonic::
@@ -117,6 +173,20 @@ Encoding::
 
 Description::
 vd[i] = x[rs1]
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmv_v_x.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmv_v_x_intrinsic.cpp[]
+----
+====
+
+
 === vmv.v.i
 
 Mnemonic::
@@ -140,3 +210,19 @@ Encoding::
 
 Description::
 vd[i] = imm
+
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmv_v_i.h[]
+
+
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmv_v_i_intrinsic.cpp[]
+----
+====

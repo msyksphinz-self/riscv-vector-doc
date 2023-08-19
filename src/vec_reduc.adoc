@@ -30,6 +30,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 Description::
 vd[0] =  sum( vs1[0] , vs2[*] )
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredsum_vs_intrinsic.cpp[]
+----
+====
+
+
 === vredmaxu.vs
 
 Mnemonic::
@@ -56,6 +66,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 
 Description::
 vd[0] = maxu( vs1[0] , vs2[*] )
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredmaxu_vs_intrinsic.cpp[]
+----
+====
+
 
 === vredmax.vs
 
@@ -84,6 +104,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 Description::
 vd[0] =  max( vs1[0] , vs2[*] )
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredmax_vs_intrinsic.cpp[]
+----
+====
+
+
 === vredminu.vs
 
 Mnemonic::
@@ -110,6 +140,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 
 Description::
 vd[0] = minu( vs1[0] , vs2[*] )
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredminu_vs_intrinsic.cpp[]
+----
+====
+
 
 === vredmin.vs
 
@@ -138,6 +178,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 Description::
 vd[0] =  min( vs1[0] , vs2[*] )
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredmin_vs_intrinsic.cpp[]
+----
+====
+
+
 === vredand.vs
 
 Mnemonic::
@@ -165,6 +215,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 Description::
 vd[0] =  and( vs1[0] , vs2[*] )
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredand_vs_intrinsic.cpp[]
+----
+====
+
+
 === vredor.vs
 
 Mnemonic::
@@ -191,6 +251,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vred
 
 Description::
 vd[0] =   or( vs1[0] , vs2[*] )
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredor_vs_intrinsic.cpp[]
+----
+====
+
 
 === vredxor.vs
 
@@ -222,6 +292,16 @@ vd[0] =  xor( vs1[0] , vs2[*] )
 
 == Vector Widening Integer Reduction Instructions
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vredxor_vs_intrinsic.cpp[]
+----
+====
+
+
 === vwredsumu.vs
 
 Mnemonic::
@@ -247,6 +327,16 @@ Description::
 Unsigned sum reduction into double-width accumulator
 
 2*SEW = 2*SEW + sum(zero-extend(SEW))
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwredsumu_vs_intrinsic.cpp[]
+----
+====
+
 
 === vwredsum.vs
 
@@ -277,6 +367,16 @@ Signed sum reduction into double-width accumulator
 
 == Vector Single-Width Floating-Point Reduction Instructions
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwredsum_vs_intrinsic.cpp[]
+----
+====
+
+
 === vfredosum.vs
 
 Mnemonic::
@@ -303,6 +403,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfre
 
 Description::
 Ordered sum
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfredosum_vs_intrinsic.cpp[]
+----
+====
+
 
 === vfredusum.vs
 
@@ -331,6 +441,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfre
 Description::
 Unordered sum
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfredusum_vs_intrinsic.cpp[]
+----
+====
+
+
 === vfredmax.vs
 
 Mnemonic::
@@ -357,6 +477,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfre
 
 Description::
 Maximum value
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfredmax_vs_intrinsic.cpp[]
+----
+====
+
 
 === vfredmin.vs
 
@@ -387,6 +517,16 @@ Minimum value
 
 == Vector Widening Floating-Point Reduction Instructions
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfredmin_vs_intrinsic.cpp[]
+----
+====
+
+
 === vfwredosum.vs
 
 Mnemonic::
@@ -413,6 +553,16 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwr
 
 Description::
 Ordered sum
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwredosum_vs_intrinsic.cpp[]
+----
+====
+
 
 === vfwredusum.vs
 
@@ -441,3 +591,13 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwr
 ==== Description
 
 Unordered sum
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwredusum_vs_intrinsic.cpp[]
+----
+====

@@ -2,7 +2,7 @@
 
 === Vector Single-Width Floating-Point Add/Subtract Instructions
 
-==== vfadd.vv
+=== vfadd.vv
 Mnemonic::
 --
 	vfadd.vv vd, vs2, vs1, vm
@@ -28,7 +28,17 @@ Encoding::
 ]}
 ....
 
-==== vfadd.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfadd_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfadd.vf
 Mnemonic::
 --
 	vfadd.vf vd, vs2, rs1, vm
@@ -54,7 +64,17 @@ Floating-point add, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfadd_vf.h[]
 
-==== vfsub.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfadd_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfsub.vv
 Mnemonic::
 --
 	vfsub.vv vd, vs2, vs1, vm
@@ -80,7 +100,17 @@ Floating-point subtract, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsub_vv.h[]
 
-==== vfsub.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsub_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfsub.vf
 Mnemonic::
 --
 	vfsub.vf vd, vs2, rs1, vm
@@ -106,7 +136,17 @@ Floating-point subtract, Vector-scalar vd[i] = vs2[i] - f[rs1]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsub_vf.h[]
 
-==== vfrsub.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsub_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfrsub.vf
 Mnemonic::
 --
 	vfrsub.vf vd, vs2, rs1, vm
@@ -132,11 +172,20 @@ Floating-point subtract, Scalar-vector vd[i] = f[rs1] - vs2[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfrsub_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfrsub_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Widening Floating-Point Add/Subtract Instructions
 
 
-
-==== vfwadd.vv
+=== vfwadd.vv
 Mnemonic::
 --
 	vfwadd.vv vd, vs2, vs1, vm
@@ -162,7 +211,17 @@ Widening FP add/subtract, 2*SEW = SEW +/- SEW, vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwadd_vv.h[]
 
-==== vfwadd.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwadd_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwadd.vf
 Mnemonic::
 --
 	vfwadd.vf vd, vs2, rs1, vm
@@ -188,7 +247,17 @@ Widening FP add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwadd_vf.h[]
 
-==== vfwsub.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwadd_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfwsub.vv
 Mnemonic::
 --
 	vfwsub.vv vd, vs2, vs1, vm
@@ -214,7 +283,17 @@ Widening FP add/subtract, 2*SEW = SEW +/- SEW, vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwsb_vv.h[]
 
-==== vfwsub.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwsub_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwsub.vf
 Mnemonic::
 --
 	vfwsub.vf vd, vs2, rs1, vm
@@ -240,7 +319,17 @@ Widening FP add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwsub_vf.h[]
 
-==== vfwadd.wv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwsub_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfwadd.wv
 Mnemonic::
 --
 	vfwadd.wv vd, vs2, vs1, vm
@@ -266,7 +355,17 @@ Widening FP add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwadd_wv.h[]
 
-==== vfwadd.wf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwadd_wv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwadd.wf
 Mnemonic::
 --
 	vfwadd.wf vd, vs2, rs1, vm
@@ -292,7 +391,17 @@ Widening FP add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwadd_wf.h[]
 
-==== vfwsub.wv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwadd_wf_intrinsic.cpp[]
+----
+====
+
+
+=== vfwsub.wv
 Mnemonic::
 --
 	vfwsub.wv vd, vs2, vs1, vm
@@ -318,7 +427,17 @@ Widening FP add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwsub_wf.h[]
 
-==== vfwsub.wf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwsub_wv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwsub.wf
 Mnemonic::
 --
 	vfwsub.wf vd, vs2, rs1, vm
@@ -344,11 +463,20 @@ Widening FP add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwsub_wf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwsub_wf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Single-Width Floating-Point Multiply/Divide Instructions
 
 
-
-==== vfmul.vv
+=== vfmul.vv
 Mnemonic::
 --
 	vfmul.vv vd, vs2, vs1, vm
@@ -374,7 +502,17 @@ Floating-point multiply, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmul_vv.h[]
 
-==== vfmul.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmul_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmul.vf
 Mnemonic::
 --
 	vfmul.vf vd, vs2, rs1, vm
@@ -400,7 +538,17 @@ Floating-point multiply, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmul_vf.h[]
 
-==== vfdiv.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmul_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfdiv.vv
 Mnemonic::
 --
 	vfdiv.vv vd, vs2, vs1, vm
@@ -426,7 +574,17 @@ Floating-point divide, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfdiv_vv.h[]
 
-==== vfdiv.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfdiv_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfdiv.vf
 Mnemonic::
 --
 	vfdiv.vf vd, vs2, rs1, vm
@@ -452,7 +610,17 @@ Floating-point divide, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfdiv_vf.h[]
 
-==== vfrdiv.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfdiv_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfrdiv.vf
 Mnemonic::
 --
 	vfrdiv.vf vd, vs2, rs1, vm
@@ -478,11 +646,19 @@ Reverse floating-point divide vector = scalar / vector, scalar-vector, vd[i] = f
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfrdiv_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfrdiv_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Widening Floating-Point Multiply
 
-
-
-==== vfwmul.vv
+=== vfwmul.vv
 Mnemonic::
 --
 	vfwmul.vv    vd, vs2, vs1, vm
@@ -508,7 +684,17 @@ Widening floating-point multiply, vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwmul_vv.h[]
 
-==== vfwmul.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwmul_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwmul.vf
 Mnemonic::
 --
 	vfwmul.vf    vd, vs2, rs1, vm
@@ -534,11 +720,19 @@ Widening floating-point multiply, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwmul_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwmul_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Single-Width Floating-Point Fused Multiply-Add Instructions
 
-
-
-==== vfmacc.vv
+=== vfmacc.vv
 Mnemonic::
 --
 	vfmacc.vv vd, vs1, vs2, vm
@@ -564,7 +758,17 @@ FP multiply-accumulate, overwrites addend, vd[i] = +(vs1[i] * vs2[i]) + vd[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmacc_vv.h[]
 
-==== vfmacc.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmacc_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmacc.vf
 Mnemonic::
 --
 	vfmacc.vf vd, rs1, vs2, vm
@@ -590,7 +794,17 @@ FP multiply-accumulate, overwrites addend, vd[i] = +(f[rs1] * vs2[i]) + vd[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmacc_vf.h[]
 
-==== vfnmacc.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmacc_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmacc.vv
 Mnemonic::
 --
 	vfnmacc.vv vd, vs1, vs2, vm
@@ -616,7 +830,17 @@ FP negate-(multiply-accumulate), overwrites subtrahend, vd[i] = -(vs1[i] * vs2[i
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmacc_vv.h[]
 
-==== vfnmacc.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmacc_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmacc.vf
 Mnemonic::
 --
 	vfnmacc.vf vd, rs1, vs2, vm
@@ -642,7 +866,17 @@ FP negate-(multiply-accumulate), overwrites subtrahend, vd[i] = -(f[rs1] * vs2[i
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmacc_vf.h[]
 
-==== vfmsac.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmacc_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfmsac.vv
 Mnemonic::
 --
 	vfmsac.vv vd, vs1, vs2, vm
@@ -668,7 +902,17 @@ FP multiply-subtract-accumulator, overwrites subtrahend, vd[i] = +(vs1[i] * vs2[
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmsac_vv.h[]
 
-==== vfmsac.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmsac_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmsac.vf
 Mnemonic::
 --
 	vfmsac.vf vd, rs1, vs2, vm
@@ -694,7 +938,17 @@ FP multiply-subtract-accumulator, overwrites subtrahend, vd[i] = +(f[rs1] * vs2[
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmsac_vf.h[]
 
-==== vfnmsac.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmsac_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmsac.vv
 Mnemonic::
 --
 	vfnmsac.vv vd, vs1, vs2, vm
@@ -720,7 +974,17 @@ FP negate-(multiply-subtract-accumulator), overwrites minuend, vd[i] = -(vs1[i] 
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmsac_vv.h[]
 
-==== vfnmsac.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmsac_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmsac.vf
 Mnemonic::
 --
 	vfnmsac.vf vd, rs1, vs2, vm
@@ -746,7 +1010,17 @@ FP negate-(multiply-subtract-accumulator), overwrites minuend, vd[i] = -(f[rs1] 
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmsac_vf.h[]
 
-==== vfmadd.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmsac_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfmadd.vv
 Mnemonic::
 --
 	vfmadd.vv vd, vs1, vs2, vm
@@ -772,7 +1046,17 @@ FP multiply-add, overwrites multiplicand, vd[i] = +(vs1[i] * vd[i]) + vs2[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmadd_vv.h[]
 
-==== vfmadd.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmadd_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmadd.vf
 Mnemonic::
 --
 	vfmadd.vf vd, rs1, vs2, vm
@@ -798,7 +1082,17 @@ FP multiply-add, overwrites multiplicand, vd[i] = +(f[rs1] * vd[i]) + vs2[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmadd_vf.h[]
 
-==== vfnmadd.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmadd_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmadd.vv
 Mnemonic::
 --
 	vfnmadd.vv vd, vs1, vs2, vm
@@ -824,7 +1118,17 @@ FP negate-(multiply-add), overwrites multiplicand, vd[i] = -(vs1[i] * vd[i]) - v
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmadd_vv.h[]
 
-==== vfnmadd.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmadd_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmadd.vf
 Mnemonic::
 --
 	vfnmadd.vf vd, rs1, vs2, vm
@@ -850,7 +1154,17 @@ FP negate-(multiply-add), overwrites multiplicand, vd[i] = -(f[rs1] * vd[i]) - v
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmadd_vf.h[]
 
-==== vfmsub.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmadd_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfmsub.vv
 Mnemonic::
 --
 	vfmsub.vv vd, vs1, vs2, vm
@@ -876,7 +1190,17 @@ FP multiply-sub, overwrites multiplicand, vd[i] = +(vs1[i] * vd[i]) - vs2[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmsub_vv.h[]
 
-==== vfmsub.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmsub_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmsub.vf
 Mnemonic::
 --
 	vfmsub.vf vd, rs1, vs2, vm
@@ -902,7 +1226,17 @@ FP multiply-sub, overwrites multiplicand, vd[i] = +(f[rs1] * vd[i]) - vs2[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmsub_vf.h[]
 
-==== vfnmsub.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmsub_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmsub.vv
 Mnemonic::
 --
 	vfnmsub.vv vd, vs1, vs2, vm
@@ -928,7 +1262,17 @@ FP negate-(multiply-sub), overwrites multiplicand, vd[i] = -(vs1[i] * vd[i]) + v
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmsub_vv.h[]
 
-==== vfnmsub.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmsub_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfnmsub.vf
 Mnemonic::
 --
 	vfnmsub.vf vd, rs1, vs2, vm
@@ -954,11 +1298,31 @@ FP negate-(multiply-sub), overwrites multiplicand, vd[i] = -(f[rs1] * vd[i]) + v
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfnmsub_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfnmsub_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Widening Floating-Point Fused Multiply-Add Instructions
 
 
 
-==== vfwmacc.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfwmacc.vv
 Mnemonic::
 --
 	vfwmacc.vv vd, vs1, vs2, vm
@@ -984,7 +1348,17 @@ FP widening multiply-accumulate, overwrites addend, vd[i] = +(vs1[i] * vs2[i]) +
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwmacc_vv.h[]
 
-==== vfwmacc.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwmacc_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwmacc.vf
 Mnemonic::
 --
 	vfwmacc.vf vd, rs1, vs2, vm
@@ -1010,7 +1384,17 @@ FP widening multiply-accumulate, overwrites addend, vd[i] = +(f[rs1] * vs2[i]) +
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwmacc_vf.h[]
 
-==== vfwnmacc.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwmacc_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfwnmacc.vv
 Mnemonic::
 --
 	vfwnmacc.vv vd, vs1, vs2, vm
@@ -1036,7 +1420,17 @@ FP widening negate-(multiply-accumulate), overwrites addend, vd[i] = -(vs1[i] * 
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwnmacc_vv.h[]
 
-==== vfwnmacc.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwnmacc_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwnmacc.vf
 Mnemonic::
 --
 	vfwnmacc.vf vd, rs1, vs2, vm
@@ -1062,7 +1456,17 @@ FP widening negate-(multiply-accumulate), overwrites addend, vd[i] = -(f[rs1] * 
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwnmacc_vf.h[]
 
-==== vfwmsac.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwnmacc_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfwmsac.vv
 Mnemonic::
 --
 	vfwmsac.vv vd, vs1, vs2, vm
@@ -1088,7 +1492,17 @@ FP widening multiply-subtract-accumulator, overwrites addend, vd[i] = +(vs1[i] *
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwmsac_vv.h[]
 
-==== vfwmsac.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwmsac_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwmsac.vf
 Mnemonic::
 --
 	vfwmsac.vf vd, rs1, vs2, vm
@@ -1114,7 +1528,17 @@ FP widening multiply-subtract-accumulator, overwrites addend, vd[i] = +(f[rs1] *
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwmsac_vf.h[]
 
-==== vfwnmsac.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwmsac_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfwnmsac.vv
 Mnemonic::
 --
 	vfwnmsac.vv vd, vs1, vs2, vm
@@ -1140,7 +1564,17 @@ FP widening negate-(multiply-subtract-accumulator), overwrites addend, vd[i] = -
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwnmsac_vv.h[]
 
-==== vfwnmsac.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwnmsac_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfwnmsac.vf
 Mnemonic::
 --
 	vfwnmsac.vf vd, rs1, vs2, vm
@@ -1166,11 +1600,31 @@ FP widening negate-(multiply-subtract-accumulator), overwrites addend, vd[i] = -
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwnmsac_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwnmsac_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Square-Root Instruction
 
 
 
-==== vfsqrt.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfsqrt.v
 Mnemonic::
 --
 	vfsqrt.v vd, vs2, vm
@@ -1196,11 +1650,31 @@ Floating-point square root, Vector-vector square root
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsqrt_v.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsqrt_v_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Reciprocal Square-Root Estimate Instruction
 
 
 
-==== vfrsqrt7.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfrsqrt7.v
 Mnemonic::
 --
 	vfrsqrt7.v vd, vs2, vm
@@ -1226,11 +1700,31 @@ Floating-point reciprocal square-root estimate to 7 bits.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfrsqrt7_v.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfrsqrt7_v_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Reciprocal Estimate Instruction
 
 
 
-==== vfrec7.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfrec7.v
 Mnemonic::
 --
 	vfrec7.v vd, vs2, vm
@@ -1256,11 +1750,31 @@ Encoding::
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfrec7_v.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfrec7_v_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point MIN/MAX Instructions
 
 
 
-==== vfmin.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfmin.vv
 Mnemonic::
 --
 	vfmin.vv vd, vs2, vs1, vm
@@ -1286,7 +1800,17 @@ Floating-point minimum, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmin_vv.h[]
 
-==== vfmin.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmin_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmin.vf
 Mnemonic::
 --
 	vfmin.vf vd, vs2, rs1, vm
@@ -1312,7 +1836,17 @@ https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmi
 Description::
 Floating-point minimum, vector-scalar
 
-==== vfmax.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmin_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfmax.vv
 Mnemonic::
 --
 	vfmax.vv vd, vs2, vs1, vm
@@ -1338,7 +1872,17 @@ Floating-point maximum, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmax_vv.h[]
 
-==== vfmax.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmax_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfmax.vf
 Mnemonic::
 --
 	vfmax.vf vd, vs2, rs1, vm
@@ -1364,11 +1908,31 @@ Floating-point maximum, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmax_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmax_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Sign-Injection Instructions
 
 
 
-==== vfsgnj.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfsgnj.vv
 Mnemonic::
 --
 	vfsgnj.vv vd, vs2, vs1, vm
@@ -1394,7 +1958,17 @@ Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsgnj_vv.h[]
 
-==== vfsgnj.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsgnj_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfsgnj.vf
 Mnemonic::
 --
 	vfsgnj.vf vd, vs2, rs1, vm
@@ -1420,7 +1994,17 @@ vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsgnj_vf.h[]
 
-==== vfsgnjn.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsgnj_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfsgnjn.vv
 Mnemonic::
 --
 	vfsgnjn.vv vd, vs2, vs1, vm
@@ -1446,7 +2030,17 @@ Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsgnjn_vv.h[]
 
-==== vfsgnjn.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsgnjn_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfsgnjn.vf
 Mnemonic::
 --
 	vfsgnjn.vf vd, vs2, rs1, vm
@@ -1472,7 +2066,17 @@ vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsgnjn_vf.h[]
 
-==== vfsgnjx.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsgnjn_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vfsgnjx.vv
 Mnemonic::
 --
 	vfsgnjx.vv vd, vs2, vs1, vm
@@ -1498,7 +2102,17 @@ Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsgnjx_vv.h[]
 
-==== vfsgnjx.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsgnjx_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vfsgnjx.vf
 Mnemonic::
 --
 	vfsgnjx.vf vd, vs2, rs1, vm
@@ -1524,11 +2138,31 @@ vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfsgnjx_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfsgnjx_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Compare Instructions
 
 
 
-==== vmfeq.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vmfeq.vv
 Mnemonic::
 --
 	vmfeq.vv vd, vs2, vs1, vm
@@ -1554,7 +2188,17 @@ Compare equal, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfeq_vv.h[]
 
-==== vmfeq.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfeq_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vmfeq.vf
 Mnemonic::
 --
 	vmfeq.vf vd, vs2, rs1, vm
@@ -1580,7 +2224,17 @@ Compare equal, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmeq_vf.h[]
 
-==== vmfne.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfeq_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vmfne.vv
 Mnemonic::
 --
 	vmfne.vv vd, vs2, vs1, vm
@@ -1606,7 +2260,17 @@ Compare not equal, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfne_vv.h[]
 
-==== vmfne.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfne_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vmfne.vf
 Mnemonic::
 --
 	vmfne.vf vd, vs2, rs1, vm
@@ -1632,7 +2296,17 @@ Compare not equal, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfne_vf.h[]
 
-==== vmflt.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfne_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vmflt.vv
 Mnemonic::
 --
 	vmflt.vv vd, vs2, vs1, vm
@@ -1658,7 +2332,17 @@ Compare less than, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmflt_vv.h[]
 
-==== vmflt.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmflt_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vmflt.vf
 Mnemonic::
 --
 	vmflt.vf vd, vs2, rs1, vm
@@ -1684,7 +2368,17 @@ Compare less than, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmflt_vf.h[]
 
-==== vmfle.vv
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmflt_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vmfle.vv
 Mnemonic::
 --
 	vmfle.vv vd, vs2, vs1, vm
@@ -1710,7 +2404,17 @@ Compare less than or equal, Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfle_vv.h[]
 
-==== vmfle.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfle_vv_intrinsic.cpp[]
+----
+====
+
+
+=== vmfle.vf
 Mnemonic::
 --
 	vmfle.vf vd, vs2, rs1, vm
@@ -1736,7 +2440,17 @@ Compare less than or equal, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfle_vf.h[]
 
-==== vmfgt.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfle_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vmfgt.vf
 Mnemonic::
 --
 	vmfgt.vf vd, vs2, rs1, vm
@@ -1762,7 +2476,17 @@ Compare greater than, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfgt_vf.h[]
 
-==== vmfge.vf
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfgt_vf_intrinsic.cpp[]
+----
+====
+
+
+=== vmfge.vf
 Mnemonic::
 --
 	vmfge.vf vd, vs2, rs1, vm
@@ -1788,11 +2512,31 @@ Compare greater than or equal, vector-scalar
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmfge_vf.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmfge_vf_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Classify Instruction
 
 
 
-==== vfclass.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfclass.v
 Mnemonic::
 --
 	vfclass.v vd, vs2, vm
@@ -1818,11 +2562,31 @@ Vector-vector
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfclass_v.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfclass_v_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Merge Instruction
 
 
 
-==== vfmerge.vfm
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfmerge.vfm
 Mnemonic::
 --
 	vfmerge.vfm vd, vs2, rs1, v0
@@ -1848,9 +2612,29 @@ vd[i] = v0.mask[i] ? f[rs1] : vs2[i]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmerge_vfm.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmerge_vfm_intrinsic.cpp[]
+----
+====
+
+
 === Vector Floating-Point Move Instruction
 
-==== vfmv.v.f
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Vector_intrinsic.cpp[]
+----
+====
+
+
+=== vfmv.v.f
 Mnemonic::
 --
 	vfmv.v.f vd, rs1
@@ -1876,9 +2660,19 @@ vd[i] = f[rs1]
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfmv_v_f.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfmv_v_f_intrinsic.cpp[]
+----
+====
+
+
 === Single-Width Floating-Point/Integer Type-Convert Instructions
 
-==== vfcvt.xu.f.v
+=== vfcvt.xu.f.v
 Mnemonic::
 --
 	vfcvt.xu.f.v     vd, vs2, vm
@@ -1904,7 +2698,17 @@ Encoding::
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfcvt_xu_f_v.h[]
 
-==== vfcvt.x.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfcvt_xu_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfcvt.x.f.v
 Mnemonic::
 --
 	vfcvt.x.f.v      vd, vs2, vm
@@ -1930,7 +2734,17 @@ Convert float to signed integer.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfcvt_x_f_v.h[]
 
-==== vfcvt.rtz.xu.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfcvt_x_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfcvt.rtz.xu.f.v
 Mnemonic::
 --
 	vfcvt.rtz.xu.f.v vd, vs2, vm
@@ -1956,7 +2770,17 @@ Convert float to unsigned integer, truncating.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfcvt_rtz_xu_f_v.h[]
 
-==== vfcvt.rtz.x.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfcvt_rtz_xu_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfcvt.rtz.x.f.v
 Mnemonic::
 --
 	vfcvt.rtz.x.f.v  vd, vs2, vm
@@ -1982,7 +2806,17 @@ Convert float to signed integer, truncating.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfcvt_rtz_x_f_v.h[]
 
-==== vfcvt.f.xu.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfcvt_rtz_x_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfcvt.f.xu.v
 Mnemonic::
 --
 	vfcvt.f.xu.v     vd, vs2, vm
@@ -2008,7 +2842,17 @@ Convert unsigned integer to float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfcvt_f_xu_v.h[]
 
-==== vfcvt.f.x.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfcvt_f_xu_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfcvt.f.x.v
 Mnemonic::
 --
 	vfcvt.f.x.v      vd, vs2, vm
@@ -2034,9 +2878,29 @@ Convert signed integer to float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfcvt_f_x_v.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfcvt_f_x_v_intrinsic.cpp[]
+----
+====
+
+
 === Widening Floating-Point/Integer Type-Convert Instructions
 
-==== vfwcvt.xu.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Widening_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.xu.f.v
 Mnemonic::
 --
 	vfwcvt.xu.f.v     vd, vs2, vm
@@ -2062,7 +2926,17 @@ Convert float to double-width unsigned integer.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_xu_f_v.h[]
 
-==== vfwcvt.x.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_xu_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.x.f.v
 Mnemonic::
 --
 	vfwcvt.x.f.v      vd, vs2, vm
@@ -2088,7 +2962,17 @@ Convert float to double-width signed integer.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_x_f_v.h[]
 
-==== vfwcvt.rtz.xu.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_x_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.rtz.xu.f.v
 Mnemonic::
 --
 	vfwcvt.rtz.xu.f.v vd, vs2, vm
@@ -2114,7 +2998,17 @@ Convert float to double-width unsigned integer, truncating.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_rtz_xu_f_v.h[]
 
-==== vfwcvt.rtz.x.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_rtz_xu_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.rtz.x.f.v
 Mnemonic::
 --
 	vfwcvt.rtz.x.f.v  vd, vs2, vm
@@ -2140,7 +3034,17 @@ Convert float to double-width signed integer, truncating.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_rtz_x_f_v.h[]
 
-==== vfwcvt.f.xu.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_rtz_x_f_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.f.xu.v
 Mnemonic::
 --
 	vfwcvt.f.xu.v     vd, vs2, vm
@@ -2166,7 +3070,17 @@ Convert unsigned integer to double-width float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_f_xu_v.h[]
 
-==== vfwcvt.f.x.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_f_xu_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.f.x.v
 Mnemonic::
 --
 	vfwcvt.f.x.v      vd, vs2, vm
@@ -2192,7 +3106,17 @@ Convert signed integer to double-width float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_f_x_v.h[]
 
-==== vfwcvt.f.f.v
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_f_x_v_intrinsic.cpp[]
+----
+====
+
+
+=== vfwcvt.f.f.v
 Mnemonic::
 --
 	vfwcvt.f.f.v      vd, vs2, vm
@@ -2218,11 +3142,31 @@ Convert single-width float to double-width float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfwcvt_f_f_v.h[]
 
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfwcvt_f_f_v_intrinsic.cpp[]
+----
+====
+
+
 === Narrowing Floating-Point/Integer Type-Convert Instructions
 
 
 
-==== vfncvt.xu.f.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/Narrowing_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.xu.f.w
 Mnemonic::
 --
 	vfncvt.xu.f.w     vd, vs2, vm
@@ -2248,7 +3192,17 @@ Convert double-width float to unsigned integer.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_xu_f_w.h[]
 
-==== vfncvt.x.f.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_xu_f_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.x.f.w
 Mnemonic::
 --
 	vfncvt.x.f.w      vd, vs2, vm
@@ -2274,7 +3228,17 @@ Convert double-width float to signed integer.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_x_f_w.h[]
 
-==== vfncvt.rtz.xu.f.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_x_f_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.rtz.xu.f.w
 Mnemonic::
 --
 	vfncvt.rtz.xu.f.w vd, vs2, vm
@@ -2300,7 +3264,17 @@ Convert double-width float to unsigned integer, truncating.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_rtz_xu_f_w.h[]
 
-==== vfncvt.rtz.x.f.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_rtz_xu_f_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.rtz.x.f.w
 Mnemonic::
 --
 	vfncvt.rtz.x.f.w  vd, vs2, vm
@@ -2326,7 +3300,17 @@ Convert double-width float to signed integer, truncating.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_rtz_x_f_w.h[]
 
-==== vfncvt.f.xu.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_rtz_x_f_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.f.xu.w
 Mnemonic::
 --
 	vfncvt.f.xu.w     vd, vs2, vm
@@ -2352,7 +3336,17 @@ Convert double-width unsigned integer to float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_f_xu_w.h[]
 
-==== vfncvt.f.x.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_f_xu_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.f.x.w
 Mnemonic::
 --
 	vfncvt.f.x.w      vd, vs2, vm
@@ -2378,7 +3372,17 @@ Convert double-width signed integer to float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_f_x_w.h[]
 
-==== vfncvt.f.f.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_f_x_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.f.f.w
 Mnemonic::
 --
 	vfncvt.f.f.w      vd, vs2, vm
@@ -2404,7 +3408,17 @@ Convert double-width float to single-width float.
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_f_f_w.h[]
 
-==== vfncvt.rod.f.f.w
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_f_f_w_intrinsic.cpp[]
+----
+====
+
+
+=== vfncvt.rod.f.f.w
 Mnemonic::
 --
 	vfncvt.rod.f.f.w  vd, vs2, vm
@@ -2429,3 +3443,13 @@ Convert double-width float to single-width float, rounding towards odd.
 
 Spike Implementation::
 https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vfncvt_rod_f_f_w.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vfncvt_rod_f_f_w_intrinsic.cpp[]
+----
+====

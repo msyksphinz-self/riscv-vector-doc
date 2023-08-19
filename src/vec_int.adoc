@@ -24,6 +24,19 @@ Encoding::
 Descrption::
 Integer addition, vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vadd_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vadd_vv_intrinsic.cpp[]
+----
+====
+
 === vadd.vx
 Mnemonic::
 --
@@ -47,6 +60,18 @@ Encoding::
 Descrption::
 Integer addition, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vadd_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vadd_vx_intrinsic.cpp[]
+----
+====
 === vadd.vi
 
 Mnemonic::
@@ -70,6 +95,19 @@ Encoding::
 
 Descrption::
 Integer addition, vector-immediate
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vadd_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vadd_vi_intrinsic.cpp[]
+----
+====
 
 === vsub.vv
 Mnemonic::
@@ -95,6 +133,19 @@ Encoding::
 Description::
 Integer subtraction, vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsub_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsub_vv_intrinsic.cpp[]
+----
+====
+
 === vsub.vx
 
 Mnemonic::
@@ -119,6 +170,19 @@ Encoding::
 Description::
 Integer subtraction, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsub_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsub_vx_intrinsic.cpp[]
+----
+====
+
 === vrsub.vx
 
 Mnemonic::
@@ -142,6 +206,19 @@ Encoding::
 
 Description::
 Integer reverse subtract, vd[i] = x[rs1] - vs2[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vrsub_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vrsub_vx_intrinsic.cpp[]
+----
+====
 
 === vrsub.vi
 
@@ -175,6 +252,19 @@ The widening add/subtract instructions are provided in both signed and
 unsigned variants, depending on whether the narrower source operands
 are first sign- or zero-extended before forming the double-width sum.
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vrsub_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vrsub_vi_intrinsic.cpp[]
+----
+====
+
 === vwaddu.vv
 
 Mnemonic::
@@ -200,6 +290,19 @@ Encoding::
 Description::
 Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwaddu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwaddu_vv_intrinsic.cpp[]
+----
+====
+
 === vwaddu.vx
 
 Mnemonic::
@@ -224,6 +327,19 @@ Encoding::
 Description::
 Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwaddu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwaddu_vx_intrinsic.cpp[]
+----
+====
+
 === vwsubu.vv
 
 Mnemonic::
@@ -247,6 +363,19 @@ Encoding::
 
 Description::
 Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsubu_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsubu_vv_intrinsic.cpp[]
+----
+====
 
 === vwsubu.vx
 
@@ -273,6 +402,19 @@ Description::
 Widening unsigned integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsubu_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsubu_vx_intrinsic.cpp[]
+----
+====
+
 === vwadd.vv
 
 Mnemonic::
@@ -296,6 +438,19 @@ Encoding::
 
 Description::
 Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwadd_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwadd_vv_intrinsic.cpp[]
+----
+====
 
 === vwadd.vx
 
@@ -321,6 +476,19 @@ Encoding::
 Description::
 Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwadd_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwadd_vx_intrinsic.cpp[]
+----
+====
+
 === vwsub.vv
 
 Mnemonic::
@@ -344,6 +512,19 @@ Encoding::
 
 Description::
 Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsub_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsub_vv_intrinsic.cpp[]
+----
+====
 
 === vwsub.vx
 
@@ -370,6 +551,19 @@ Description::
 Widening signed integer add/subtract, 2*SEW = SEW +/- SEW, vector-scalar
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsub_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsub_vx_intrinsic.cpp[]
+----
+====
+
 === vwaddu.wv
 
 Mnemonic::
@@ -393,6 +587,19 @@ Encoding::
 
 Description::
 Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwaddu_wv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwaddu_wv_intrinsic.cpp[]
+----
+====
 
 === vwaddu.wx
 
@@ -419,6 +626,19 @@ Encoding::
 Description::
 Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwaddu_wx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwaddu_wx_intrinsic.cpp[]
+----
+====
+
 === vwsubu.wv
 
 Mnemonic::
@@ -442,6 +662,19 @@ Encoding::
 
 Description::
 Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsubu_wv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsubu_wv_intrinsic.cpp[]
+----
+====
 
 === vwsubu.wx
 
@@ -469,6 +702,19 @@ Description::
 Widening unsigned integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
 
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsubu_wx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsubu_wx_intrinsic.cpp[]
+----
+====
+
 === vwadd.wv
 
 Mnemonic::
@@ -492,6 +738,19 @@ Encoding::
 
 Description::
 Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwadd_wv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwadd_wv_intrinsic.cpp[]
+----
+====
 
 === vwadd.wx
 
@@ -518,6 +777,19 @@ Encoding::
 Description::
 Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwadd_wx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwadd_wx_intrinsic.cpp[]
+----
+====
+
 === vwsub.wv
 
 Mnemonic::
@@ -541,6 +813,19 @@ Encoding::
 
 Description::
 Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-vector
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsub_wv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsub_wv_intrinsic.cpp[]
+----
+====
 
 === vwsub.wx
 
@@ -569,6 +854,19 @@ Widening signed integer add/subtract, 2*SEW = 2*SEW +/- SEW, vector-scalar
 
 == Vector Integer Extension
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vwsub_wx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vwsub_wx_intrinsic.cpp[]
+----
+====
+
 === vzext.vf2
 Mnemonic::
 --
@@ -591,6 +889,19 @@ Encoding::
 
 Description::
 Zero-extend SEW/2 source to SEW destination
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vzext_vf2.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vzext_vf2_intrinsic.cpp[]
+----
+====
 
 === vsext.vf2
 Mnemonic::
@@ -615,6 +926,19 @@ Encoding::
 Description::
 Sign-extend SEW/2 source to SEW destination
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsext_vf2.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsext_vf2_intrinsic.cpp[]
+----
+====
+
 === vzext.vf4
 Mnemonic::
 --
@@ -637,6 +961,19 @@ Encoding::
 
 Description::
 Zero-extend SEW/4 source to SEW destination
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vzext_vf4.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vzext_vf4_intrinsic.cpp[]
+----
+====
 
 === vsext.vf4
 Mnemonic::
@@ -661,6 +998,19 @@ Encoding::
 Description::
 Sign-extend SEW/4 source to SEW destination
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsext_vf4.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsext_vf4_intrinsic.cpp[]
+----
+====
+
 === vzext.vf8
 Mnemonic::
 --
@@ -683,6 +1033,19 @@ Encoding::
 
 Description::
 Zero-extend SEW/8 source to SEW destination
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vzext_vf8.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vzext_vf8_intrinsic.cpp[]
+----
+====
 
 === vsext.vf8
 Mnemonic::
@@ -709,6 +1072,19 @@ Sign-extend SEW/8 source to SEW destination
 
 == Vector Integer Add-with-Carry / Subtract-with-Borrow Instructions
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsext_vf8.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsext_vf8_intrinsic.cpp[]
+----
+====
+
 === vadc.vvm
 
 Mnemonic::
@@ -732,6 +1108,19 @@ Encoding::
 
 Description::
 Produce sum with carry. vd[i] = vs2[i] + vs1[i] + v0.mask[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vadc_vvm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vadc_vvm_intrinsic.cpp[]
+----
+====
 
 === vadc.vxm
 
@@ -757,6 +1146,19 @@ Encoding::
 Description::
 Produce sum with carry. vd[i] = vs2[i] + x[rs1] + v0.mask[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vadc_vxm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vadc_vxm_intrinsic.cpp[]
+----
+====
+
 === vadc.vim
 
 Mnemonic::
@@ -780,6 +1182,19 @@ Encoding::
 
 Description::
 Produce sum with carry. vd[i] = vs2[i] + imm + v0.mask[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vadc_vim.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vadc_vim_intrinsic.cpp[]
+----
+====
 
 === vmadc.vvm
 
@@ -805,6 +1220,19 @@ Encoding::
 Description::
 Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + vs1[i] + v0.mask[i])
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadc_vvm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadc_vvm_intrinsic.cpp[]
+----
+====
+
 === vmadc.vxm
 
 Mnemonic::
@@ -828,6 +1256,19 @@ Encoding::
 
 Description::
 Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + x[rs1] + v0.mask[i])
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadc_vxm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadc_vxm_intrinsic.cpp[]
+----
+====
 
 === vmadc.vim
 
@@ -853,6 +1294,19 @@ Encoding::
 Description::
 Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + imm + v0.mask[i])
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadc_vim.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadc_vim_intrinsic.cpp[]
+----
+====
+
 === vmadc.vv
 
 Mnemonic::
@@ -876,6 +1330,19 @@ Encoding::
 
 Description::
 Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + vs1[i])
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadc_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadc_vv_intrinsic.cpp[]
+----
+====
 
 === vmadc.vx
 
@@ -901,6 +1368,19 @@ Encoding::
 Description::
 Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + x[rs1])
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadc_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadc_vx_intrinsic.cpp[]
+----
+====
+
 === vmadc.vi
 
 Mnemonic::
@@ -924,6 +1404,19 @@ Encoding::
 
 Description::
 Produce carry out in mask register format. vd.mask[i] = carry_out(vs2[i] + imm)
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmadc_vi.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmadc_vi_intrinsic.cpp[]
+----
+====
 
 === vsbc.vvm
 
@@ -949,6 +1442,19 @@ Encoding::
 Description::
 Produce difference with borrow. vd[i] = vs2[i] - vs1[i] - v0.mask[i]
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsbc_vvm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsbc_vvm_intrinsic.cpp[]
+----
+====
+
 === vsbc.vxm
 
 Mnemonic::
@@ -972,6 +1478,19 @@ Encoding::
 
 Description::
 Produce difference with borrow. vd[i] = vs2[i] - x[rs1] - v0.mask[i]
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vsbc_vxm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vsbc_vxm_intrinsic.cpp[]
+----
+====
 
 === vmsbc.vvm
 
@@ -997,6 +1516,19 @@ Encoding::
 Description::
 Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - vs1[i] - v0.mask[i])
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsbc_vvm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsbc_vvm_intrinsic.cpp[]
+----
+====
+
 === vmsbc.vxm
 
 Mnemonic::
@@ -1020,6 +1552,19 @@ Encoding::
 
 Description::
 Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - x[rs1] - v0.mask[i])
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsbc_vxm.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsbc_vxm_intrinsic.cpp[]
+----
+====
 
 === vmsbc.vv
 
@@ -1045,6 +1590,19 @@ Encoding::
 Description::
 Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - vs1[i])
 
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsbc_vv.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsbc_vv_intrinsic.cpp[]
+----
+====
+
 === vmsbc.vx
 
 Mnemonic::
@@ -1068,3 +1626,16 @@ Encoding::
 
 Description::
 Produce borrow out in mask register format. vd.mask[i] = borrow_out(vs2[i] - x[rs1])
+
+Spike Implementation::
+https://github.com/riscv-software-src/riscv-isa-sim/blob/master/riscv/insns/vmsbc_vx.h[]
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsbc_vx_intrinsic.cpp[]
+----
+====
