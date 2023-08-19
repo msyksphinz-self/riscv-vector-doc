@@ -42,3 +42,5 @@ include::vec_float.adoc[]
 include::vec_reduc.adoc[]
 
 include::vec_mask.adoc[]
+
+include::vec_perm.adoc[]
