@@ -878,7 +878,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 0x6, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
@@ -914,7 +914,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 0x7, attr:'vs1'},
   {bits: 5, name: 'vs2', type: 2},
@@ -950,7 +950,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 0x4, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
@@ -986,7 +986,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 0x5, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
@@ -1022,7 +1022,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 0x2, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
@@ -1058,7 +1058,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 0x3, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},

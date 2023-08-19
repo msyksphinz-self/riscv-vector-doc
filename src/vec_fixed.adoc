@@ -357,7 +357,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
@@ -391,7 +391,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVX'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 6},
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
@@ -425,7 +425,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
@@ -459,7 +459,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVX'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 6},
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
@@ -488,7 +488,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
@@ -522,7 +522,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVX'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 6},
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
@@ -556,7 +556,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVV'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 2},
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
@@ -590,7 +590,7 @@ Encoding::
 ....
 {reg: [
   {bits: 7, name: 0x57, attr: 'OPMVX'},
-  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 5, name: 'vd', type: 7},
   {bits: 3, name: 6},
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
