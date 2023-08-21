@@ -5,7 +5,6 @@ node_modules/
 package-lock.json
 package.json
 *.docbook
-*.html
 *.pdf
 *.rst
 build/
