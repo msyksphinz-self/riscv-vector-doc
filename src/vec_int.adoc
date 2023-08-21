@@ -1639,13 +1639,3 @@ Intrinsic Functions::
 include::./intrinsic/vmsbc_vx_intrinsic.cpp[]
 ----
 ====
-
-
-Intrinsic Functions::
-[%collapsible]
-====
-[source,c]
-----
-include::./intrinsic/vmsbc_v_intrinsic.cpp[]
-----
-====

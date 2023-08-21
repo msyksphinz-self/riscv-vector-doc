@@ -1432,13 +1432,3 @@ Intrinsic Functions::
 include::./intrinsic/vwmaccus_vx_intrinsic.cpp[]
 ----
 ====
-
-
-Intrinsic Functions::
-[%collapsible]
-====
-[source,c]
-----
-include::./intrinsic/vwmaccus_v_intrinsic.cpp[]
-----
-====

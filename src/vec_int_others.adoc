@@ -226,13 +226,3 @@ Intrinsic Functions::
 include::./intrinsic/vmv_v_i_intrinsic.cpp[]
 ----
 ====
-
-
-Intrinsic Functions::
-[%collapsible]
-====
-[source,c]
-----
-include::./intrinsic/vmv_v_intrinsic.cpp[]
-----
-====

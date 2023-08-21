@@ -1,4 +1,3 @@
-[[riscv-vector-doc]]
 = RISC-V Vector ISA-extensions
 :description: Vector ISA-extensions
 :company: RISC-V

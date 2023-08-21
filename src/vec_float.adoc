@@ -3453,13 +3453,3 @@ Intrinsic Functions::
 include::./intrinsic/vfncvt_rod_f_f_w_intrinsic.cpp[]
 ----
 ====
-
-
-Intrinsic Functions::
-[%collapsible]
-====
-[source,c]
-----
-include::./intrinsic/vfncvt_v_intrinsic.cpp[]
-----
-====

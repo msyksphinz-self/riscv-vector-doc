@@ -1110,13 +1110,3 @@ Intrinsic Functions::
 include::./intrinsic/vnclip_wi_intrinsic.cpp[]
 ----
 ====
-
-
-Intrinsic Functions::
-[%collapsible]
-====
-[source,c]
-----
-include::./intrinsic/vnclip_v_intrinsic.cpp[]
-----
-====
