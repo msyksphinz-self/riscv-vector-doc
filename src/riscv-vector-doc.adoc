@@ -11,7 +11,7 @@
 
 // needs to be changed
 :WaveDromEditorApp: ~/wavedrom-cli/cli/wavedrom-cli.js
-:imagesoutdir: images
+:imagesoutdir: ../docs/images
 :icons: font
 :lang: en
 :listing-caption: Listing
