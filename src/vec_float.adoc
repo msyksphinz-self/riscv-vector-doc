@@ -564,7 +564,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 'funct6'},
+  {bits: 6, name: 0x20, attr: 'vfdiv'},
 ]}
 ....
 
