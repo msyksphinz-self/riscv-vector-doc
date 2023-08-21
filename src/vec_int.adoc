@@ -17,7 +17,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0, attr: 'funct6'},
+  {bits: 6, name: 0, attr: 'vadd'},
 ]}
 ....
 
@@ -53,7 +53,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0, attr: 'funct6'},
+  {bits: 6, name: 0, attr: 'vadd'},
 ]}
 ....
 
@@ -89,7 +89,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0, attr: 'funct6'},
+  {bits: 6, name: 0, attr: 'vadd'},
 ]}
 ....
 
@@ -125,7 +125,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 2, attr: 'funct6'},
+  {bits: 6, name: 2, attr: 'vsub'},
 ]}
 ....
 
@@ -163,7 +163,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 2, attr: 'funct6'},
+  {bits: 6, name: 2, attr: 'vsub'},
 ]}
 ....
 
@@ -200,7 +200,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 3, attr: 'funct6'},
+  {bits: 6, name: 3, attr: 'vrsub'},
 ]}
 ....
 
@@ -238,7 +238,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 3, attr: 'funct6'},
+  {bits: 6, name: 3, attr: 'vrsub'},
 ]}
 ....
 
@@ -282,7 +282,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x30, attr: 'funct6'},
+  {bits: 6, name: 0x30, attr: 'vwaddu'},
 ]}
 ....
 
@@ -320,7 +320,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x30, attr: 'funct6'},
+  {bits: 6, name: 0x30, attr: 'vwaddu'},
 ]}
 ....
 
@@ -357,7 +357,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x32, attr: 'funct6'},
+  {bits: 6, name: 0x32, attr: 'vwsubu'},
 ]}
 ....
 
@@ -394,7 +394,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x32, attr: 'funct6'},
+  {bits: 6, name: 0x32, attr: 'vwsubu'},
 ]}
 ....
 
@@ -432,7 +432,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x31, attr: 'funct6'},
+  {bits: 6, name: 0x31, attr: 'vwadd'},
 ]}
 ....
 
@@ -469,7 +469,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x31, attr: 'funct6'},
+  {bits: 6, name: 0x31, attr: 'vwadd'},
 ]}
 ....
 
@@ -506,7 +506,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x33, attr: 'funct6'},
+  {bits: 6, name: 0x33, attr: 'vwsub'},
 ]}
 ....
 
@@ -543,7 +543,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x33, attr: 'funct6'},
+  {bits: 6, name: 0x33, attr: 'vwsub'},
 ]}
 ....
 
@@ -581,7 +581,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x34, attr: 'funct6'},
+  {bits: 6, name: 0x34, attr: 'vwaddu'},
 ]}
 ....
 
@@ -618,7 +618,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x34, attr: 'funct6'},
+  {bits: 6, name: 0x34, attr: 'vwaddu'},
 ]}
 ....
 
@@ -656,7 +656,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x36, attr: 'funct6'},
+  {bits: 6, name: 0x36, attr: 'vwsubu'},
 ]}
 ....
 
@@ -693,7 +693,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x36, attr: 'funct6'},
+  {bits: 6, name: 0x36, attr: 'vwsubu'},
 ]}
 ....
 
@@ -732,7 +732,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x35, attr: 'funct6'},
+  {bits: 6, name: 0x35, attr: 'vwadd'},
 ]}
 ....
 
@@ -769,7 +769,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x35, attr: 'funct6'},
+  {bits: 6, name: 0x35, attr: 'vwadd'},
 ]}
 ....
 
@@ -807,7 +807,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x37, attr: 'funct6'},
+  {bits: 6, name: 0x37, attr: 'vwsub'},
 ]}
 ....
 
@@ -844,7 +844,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x37, attr: 'funct6'},
+  {bits: 6, name: 0x37, attr: 'vwsub'},
 ]}
 ....
 
@@ -883,7 +883,7 @@ Encoding::
   {bits: 5, name: 0x6, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vzext'},
 ]}
 ....
 
@@ -919,7 +919,7 @@ Encoding::
   {bits: 5, name: 0x7, attr:'vs1'},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vsext'},
 ]}
 ....
 
@@ -955,7 +955,7 @@ Encoding::
   {bits: 5, name: 0x4, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vzext'},
 ]}
 ....
 
@@ -991,7 +991,7 @@ Encoding::
   {bits: 5, name: 0x5, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vsext'},
 ]}
 ....
 
@@ -1027,7 +1027,7 @@ Encoding::
   {bits: 5, name: 0x2, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vzext'},
 ]}
 ....
 
@@ -1063,7 +1063,7 @@ Encoding::
   {bits: 5, name: 0x3, attr: 'vs1'},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vsext'},
 ]}
 ....
 
@@ -1102,7 +1102,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x10, attr: 'funct6'},
+  {bits: 6, name: 0x10, attr: 'vadc'},
 ]}
 ....
 
@@ -1139,7 +1139,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x10, attr: 'funct6'},
+  {bits: 6, name: 0x10, attr: 'vadc'},
 ]}
 ....
 
@@ -1176,7 +1176,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x10, attr: 'funct6'},
+  {bits: 6, name: 0x10, attr: 'vadc'},
 ]}
 ....
 
@@ -1213,7 +1213,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x11, attr: 'funct6'},
+  {bits: 6, name: 0x11, attr: 'vmadc'},
 ]}
 ....
 
@@ -1250,7 +1250,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x11, attr: 'funct6'},
+  {bits: 6, name: 0x11, attr: 'vmadc'},
 ]}
 ....
 
@@ -1287,7 +1287,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x11, attr: 'funct6'},
+  {bits: 6, name: 0x11, attr: 'vmadc'},
 ]}
 ....
 
@@ -1324,7 +1324,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x1, attr: 'vm'},
-  {bits: 6, name: 0x11, attr: 'funct6'},
+  {bits: 6, name: 0x11, attr: 'vmadc'},
 ]}
 ....
 
@@ -1361,7 +1361,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x1, attr: 'vm'},
-  {bits: 6, name: 0x11, attr: 'funct6'},
+  {bits: 6, name: 0x11, attr: 'vmadc'},
 ]}
 ....
 
@@ -1398,7 +1398,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x1, attr: 'vm'},
-  {bits: 6, name: 0x11, attr: 'funct6'},
+  {bits: 6, name: 0x11, attr: 'vmadc'},
 ]}
 ....
 
@@ -1435,7 +1435,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vsbc'},
 ]}
 ....
 
@@ -1472,7 +1472,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x12, attr: 'funct6'},
+  {bits: 6, name: 0x12, attr: 'vsbc'},
 ]}
 ....
 
@@ -1509,7 +1509,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x13, attr: 'funct6'},
+  {bits: 6, name: 0x13, attr: 'vmsbc'},
 ]}
 ....
 
@@ -1546,7 +1546,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x0, attr: 'vm'},
-  {bits: 6, name: 0x13, attr: 'funct6'},
+  {bits: 6, name: 0x13, attr: 'vmsbc'},
 ]}
 ....
 
@@ -1583,7 +1583,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x1, attr: 'vm'},
-  {bits: 6, name: 0x13, attr: 'funct6'},
+  {bits: 6, name: 0x13, attr: 'vmsbc'},
 ]}
 ....
 
@@ -1620,7 +1620,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0x1, attr: 'vm'},
-  {bits: 6, name: 0x13, attr: 'funct6'},
+  {bits: 6, name: 0x13, attr: 'vmsbc'},
 ]}
 ....
 
@@ -1637,5 +1637,15 @@ Intrinsic Functions::
 [source,c]
 ----
 include::./intrinsic/vmsbc_vx_intrinsic.cpp[]
+----
+====
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmsbc_v_intrinsic.cpp[]
 ----
 ====

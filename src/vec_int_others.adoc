@@ -16,7 +16,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0, attr: 'vm'},
-  {bits: 6, name: 0x17, attr: 'funct6'},
+  {bits: 6, name: 0x17, attr: 'vmerge'},
 ]}
 ....
 
@@ -53,7 +53,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0, attr: 'vm'},
-  {bits: 6, name: 0x17, attr: 'funct6'},
+  {bits: 6, name: 0x17, attr: 'vmerge'},
 ]}
 ....
 
@@ -90,7 +90,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 0, attr: 'vm'},
-  {bits: 6, name: 0x17, attr: 'funct6'},
+  {bits: 6, name: 0x17, attr: 'vmerge'},
 ]}
 ....
 
@@ -130,7 +130,7 @@ Encoding::
   {bits: 5, name: 'vs1', type: 2},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 1, attr: 'vm'},
-  {bits: 6, name: 0x17, attr: 'funct6'},
+  {bits: 6, name: 0x17, attr: 'vmv'},
 ]}
 ....
 
@@ -167,7 +167,7 @@ Encoding::
   {bits: 5, name: 'rs1', type: 4},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 1, attr: 'vm'},
-  {bits: 6, name: 0x17, attr: 'funct6'},
+  {bits: 6, name: 0x17, attr: 'vmv'},
 ]}
 ....
 
@@ -204,7 +204,7 @@ Encoding::
   {bits: 5, name: 'imm[4:0]', type: 5},
   {bits: 5, name: 'vs2', type: 2},
   {bits: 1, name: 1, attr: 'vm'},
-  {bits: 6, name: 0x17, attr: 'funct6'},
+  {bits: 6, name: 0x17, attr: 'vmv'},
 ]}
 ....
 
@@ -224,5 +224,15 @@ Intrinsic Functions::
 [source,c]
 ----
 include::./intrinsic/vmv_v_i_intrinsic.cpp[]
+----
+====
+
+
+Intrinsic Functions::
+[%collapsible]
+====
+[source,c]
+----
+include::./intrinsic/vmv_v_intrinsic.cpp[]
 ----
 ====
